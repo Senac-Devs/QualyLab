@@ -1,0 +1,230 @@
+body {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    background: url("../assets/background/estrada.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100vh;
+  }
+  p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 18px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    margin-top: 80px;
+    max-width: 992px;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    box-shadow: 0px 0px 30px 7px rgba(255, 255, 255, 0.3);
+    background: rgb(7, 7, 7, 0.5);
+  }
+  .description {
+    display: flex;
+    color: white;
+    text-align: left;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    padding: 72px 60px;
+  }
+  .login {
+    background: rgb(255, 255, 255, 0.6);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 384px;
+    height: 100%;
+  }
+  .login > h1 {
+    font-weight: 500;
+  }
+  .user {
+    background: url("../assets/icons/user1.png") no-repeat left;
+    background-size: 26px;
+  }
+  .password {
+    background: url("../assets/icons/lock1.png") no-repeat left;
+    background-size: 26px;
+  }
+  .user,
+  .password {
+    padding-left: 34px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 200px;
+    margin-bottom: 12px;
+    border: none;
+    background-color: #f0f0f0;
+  }
+  input:focus {
+    outline: none;
+  }
+  .button {
+    padding: 8px;
+    width: 120px;
+    border: none;
+    background: linear-gradient(-45deg, #5a5a5a, #eeff51);
+    color: white;
+  }
+  .button:hover {
+    background: linear-gradient(-45deg, #eeff51, #5a5a5a);
+    font-weight: bold;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .error {
+    border: 2px solid #c53030;
+  }
+  
+  .toast {
+    display: none;
+    max-width: 275px;
+    max-height: 100px;
+    position: fixed;
+    right: 14px;
+    bottom: 14px;
+    padding: 20px;
+    background-color: #c53030;
+    color: #fff;
+    border-radius: 10px 10px 0 10px;
+  }
+  
+  .show {
+    display: block !important;
+  }
+  p {
+    color: #fff;
+    font-weight: bold;
+  }
+  .credit{
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-bottom: 50px;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: normal;
+  }
+  
+  img {
+    margin: 3px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px 7px rgba(255, 255, 255, 0.2)
+  }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #ee7752 transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .toastTitle {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  
+  .toastDescription {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  @media (max-width: 992px) {
+    .card {
+      flex-direction: column;
+      max-width: 350px;
+      margin: 22px;
+    }
+    .login {
+      width: 100%;
+      min-height: 250px;
+      border-radius: 0 0 10px 10px;
+    }
+    .description {
+      border-radius: 10px 10px 0 0;
+      min-height: 260px;
+      padding: 30px;
+    }
+    .description h1 {
+      margin: 6px;
+    }
+    .toast {
+      text-align: center;
+      left: 2%;
+      right: 2%;
+      bottom: 5px;
+      max-width: 100%;
+      height: 40px;
+      padding: 10px;
+      border-radius: 10px 10px 0 0;
+    }
+    .toastTitle {
+      margin-bottom: 2px;
+    }
+  }
+  

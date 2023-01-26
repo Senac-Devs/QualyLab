@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      //verifica se o esta logado para não acessar login.
+      if (localStorage.getItem('estaLogado') == 'true') {
+        window.location.replace('./login.html')
+      }
+    </script>
+    <title>Login-QualyLab</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="card">
+        <div class="description">
+          <div>
+            <h1>QualyLab</h1>
+          </div>
+          <h2>Controle de Qualidade Laboratório Asfaltico</h2>
+          <p>
+            Sistema dedicado ao lançamento, monitoramento, emissão de relatório de controle de qualidade dos testes de laboratório asfaltico
+          </p>
+        </div>
+        <form>
+          <div class="login">
+            <h1>Login</h1>
+            <input
+              id="nomeUsuario"
+              type="text"
+              class="user"
+              autocomplete="off"
+            />
+            <input id="senhaUsuario" type="password" class="password" />
+            <input type="submit" value="Entrar" class="button" />
+          </div>
+        </form>
+      </div>
+    
+      <p>Desenvolvedores:</p>
+    <div class="credit">
+      <a href="https://github.com/maycanin" target="_blank" class="tooltip"><span class="tooltiptext">Mayson</span>
+          <img
+            src="./assets/devs/me.jpg"
+            height="42"
+            width="42"
+            alt="Mayson C. Inácio"
+          />
+      </a>
+      <a href="https://github.com/adersoncarvalho" target="_blank" class="tooltip"><span class="tooltiptext">Aderson</span>
+              <img
+              src="./assets/devs/Aderson.jpg"
+              height="42"
+              width="42"
+              alt="Aderson"
+              />
+        </a>
+    </div>
+</div>
+    <div class="toast" id="toast">
+      <p class="toastTitle" id="toastTitle"></p>
+      <p class="toastDescription" id="toastDescription"></p>
+    </div>
+    <script src="./login.js"></script>
+  </body>
+</html>
