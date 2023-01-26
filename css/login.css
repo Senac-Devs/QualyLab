@@ -3,7 +3,7 @@ body {
     margin: 0;
     background: url("../assets/background/estrada.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 120% 120%;
     height: 100vh;
   }
   p {
@@ -20,10 +20,8 @@ body {
     align-items: center;
   }
   .card {
-    margin-top: 80px;
     max-width: 992px;
     width: 100%;
-    height: 70%;
     display: flex;
     box-shadow: 0px 0px 30px 7px rgba(255, 255, 255, 0.3);
     background: rgb(7, 7, 7, 0.5);
@@ -35,7 +33,7 @@ body {
     justify-content: center;
     flex-direction: column;
     flex: 1;
-    padding: 72px 60px;
+    padding: 72px;
   }
   .login {
     background: rgb(255, 255, 255, 0.6);
@@ -50,11 +48,11 @@ body {
     font-weight: 500;
   }
   .user {
-    background: url("../assets/icons/user1.png") no-repeat left;
+    background: url("../assets/icons/user.png") no-repeat left;
     background-size: 26px;
   }
   .password {
-    background: url("../assets/icons/lock1.png") no-repeat left;
+    background: url("../assets/icons/lock.png") no-repeat left;
     background-size: 26px;
   }
   .user,
@@ -123,66 +121,29 @@ body {
     font-weight: bold;
     display: flex;
     align-items: center;
-    padding-bottom: 50px;
     justify-content: center;
+    border-radius: 20px;
     width: 100%;
   }
   
   a {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 43px;
-    height: 43px;
+    justify-content: flex-end;
+    width: 90%;
+    padding-top: 40px;
+    margin-bottom: 10px;
     text-decoration: none;
     color: #fff;
     font-weight: normal;
+    align-items: flex-end;
   }
   
   img {
     margin: 3px;
-    border-radius: 20px;
     box-shadow: 0px 0px 30px 7px rgba(255, 255, 255, 0.2)
   }
-  .tooltip {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e);
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: 125%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent #ee7752 transparent;
-  }
-  
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
-  
+    
   .toastTitle {
     font-size: 16px;
     font-weight: 700;
@@ -203,10 +164,8 @@ body {
     .login {
       width: 100%;
       min-height: 250px;
-      border-radius: 0 0 10px 10px;
     }
     .description {
-      border-radius: 10px 10px 0 0;
       min-height: 260px;
       padding: 30px;
     }
