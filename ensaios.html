@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/index.css" />
+        <script src="./js/login.js"></script>
+        <title>Index</title>
+    </head>
+    <body>
+        <header>
+            <h1>QualyLab</h1>
+            <section class="menu">
+                <a href="./index.html" id="sair" class="button"
+                    >Obras em andamento</a
+                >
+                <a href="./ensaios.html" id="sair" class="button">Ensaios</a>
+                <a href="./relatorios.html" id="sair" class="button"
+                    >Relatórios</a
+                >
+                <a href="./formulas.html" id="sair" class="button"
+                    >Cadastrar fórmula</a
+                >
+                <a href="./obras.html" id="sair" class="button"
+                    >Cadastrar nova obra</a
+                >
+                <a href="./devs.html" id="sair" class="button"
+                    >Desenvolvedores</a
+                >
+                <a href="" id="sair" class="button" onclick="deslogar()"
+                    >Sair</a
+                >
+            </section>
+        </header>
+        <main>
+            <section class="container">
+                <form action="">
+                    <div class="linha1">
+                        <label for="">Rodovia</label>
+                        <select name="" id="">
+                            <option value="PR-151">PR-151</option>
+                            <option value="PR-152">PR-152</option>
+                            <option value="PR-153">PR-153</option>
+                            <option value="PR-154">PR-154</option>
+                            <option value="PR-155">PR-155</option>
+                        </select>
+                        <label for="">Trecho</label>
+                        <select name="" id="">
+                            <option value="Concreto Betumino Usinado a Quente">
+                                Porto Emigdão (divisa PR/SP) - Entr. PR-431
+                            </option>
+                            <option
+                                value="Porto Emigdão (divisa PR/SP) - Entr. PR-431"
+                            >
+                                Porto Emigdão (divisa PR/SP) - Entr. PR-432
+                            </option>
+                            <option
+                                value="Porto Emigdão (divisa PR/SP) - Entr. PR-431"
+                            >
+                                Porto Emigdão (divisa PR/SP) - Entr. PR-433
+                            </option>
+                            <option
+                                value="Porto Emigdão (divisa PR/SP) - Entr. PR-431"
+                            >
+                                Porto Emigdão (divisa PR/SP) - Entr. PR-434
+                            </option>
+                            <option
+                                value="Porto Emigdão (divisa PR/SP) - Entr. PR-431"
+                            >
+                                Porto Emigdão (divisa PR/SP) - Entr. PR-435
+                            </option>
+                        </select>
+                        <label for="">Extensão</label>
+                        <select name="" id="">
+                            <option value="12,93">12,93</option>
+                            <option value="14,50">14,50</option>
+                            <option value="20,80">20,80</option>
+                            <option value="1">1</option>
+                            <option value="51">51</option>
+                        </select>
+                    </div>
+                    <div class="linha2">
+                        <label for="">Estaca</label>
+                        <select name="" id="">
+                            <option value="83+10 LE">83+10 LE</option>
+                            <option value="50+5 LE">50+5 LE</option>
+                            <option value="60 LE">60 LE</option>
+                            <option value="90+15 LE">90+15 LE</option>
+                            <option value="15+5 LE">15+5 LE</option>
+                        </select>
+                        <label for="">Tipo de Serviço</label>
+                        <select name="" id="">
+                            <option
+                                value="Concreto Betuminoso Usinado a Quente"
+                            >
+                                Concreto Betuminoso Usinado a Quente
+                            </option>
+                            <option value="Concreto Betuminoso Usinado a Frio">
+                                Concreto Betuminoso Usinado a Frio
+                            </option>
+                            <option value="Concreto Betuminoso Usinado a Água">
+                                Concreto Betuminoso Usinado a Água
+                            </option>
+                            <option value="Concreto Betuminoso Usinado a Cera">
+                                Concreto Betuminoso Usinado a Cera
+                            </option>
+                            <option value="Concreto Betuminoso Usinado a Vento">
+                                Concreto Betuminoso Usinado a Vento
+                            </option>
+                        </select>
+                        <label for="">Data</label>
+                        <input type="date" />
+                    </div>
+                    <div class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th rowspan="3">Peneiras</th>
+                                    <th rowspan="3">Peso Retido (g)</th>
+                                    <th rowspan="3">(%)Retida</th>
+                                    <th rowspan="3">(%) Retida Acumulada</th>
+                                    <th rowspan="3">(%) Passando</th>
+                                    <th colspan="2">Faixa C DER/PR</th>
+                                    <th colspan="2">Extração de Betume</th>
+                                </tr>
+                                <tr>
+                                    <td>MÍN.</td>
+                                    <td>MÁX.</td>
+                                    <td>CAP - 50/70</td>
+                                    <td>TIPO DE LIGANTE</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1"</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1"
+                                    </td>
+                                    <td>1"</td>
+                                    <td>1"</td>
+                                    <td>1"</td>
+                                    <td>100,0</td>
+                                    <td>100,0</td>
+                                    <td rowspan="2">PESO DA AMOSTRA</td>
+                                    <td
+                                        rowspan="2"
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        100,0
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3/4"</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        3/4"
+                                    </td>
+                                    <td>3/4"</td>
+                                    <td>3/4"</td>
+                                    <td>3/4"</td>
+                                    <td>100,0</td>
+                                    <td>100,0</td>
+                                </tr>
+                                <tr>
+                                    <td>3/8"</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        3/8"
+                                    </td>
+                                    <td>3/8"</td>
+                                    <td>3/8"</td>
+                                    <td>3/8"</td>
+                                    <td>100,0</td>
+                                    <td>100,0</td>
+                                    <td rowspan="2">PESO DO BETUME</td>
+                                    <td
+                                        rowspan="2"
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        0
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>nº 4</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        nº 4
+                                    </td>
+                                    <td>nº 4</td>
+                                    <td>nº 4</td>
+                                    <td>nº 4</td>
+                                    <td>80,0</td>
+                                    <td>80,0</td>
+                                </tr>
+                                <tr>
+                                    <td>nº 10</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        nº 10
+                                    </td>
+                                    <td>nº 10</td>
+                                    <td>nº 10</td>
+                                    <td>nº 10</td>
+                                    <td>70,0</td>
+                                    <td>70,0</td>
+                                    <td rowspan="2">PESO DA AMOSTRA</td>
+                                    <td rowspan="2">100,0</td>
+                                </tr>
+                                <tr>
+                                    <td>nº 40</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        nº 40
+                                    </td>
+                                    <td>nº 40</td>
+                                    <td>nº 40</td>
+                                    <td>nº 40</td>
+                                    <td>70,0</td>
+                                    <td>70,0</td>
+                                </tr>
+                                <tr>
+                                    <td>nº 200</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        nº 200
+                                    </td>
+                                    <td>nº 200</td>
+                                    <td>nº 200</td>
+                                    <td>nº 200</td>
+                                    <td>70,0</td>
+                                    <td>70,0</td>
+                                    <td>% DE BETUME</td>
+                                    <td>29,67</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>CORPO DE PROVA Nº</th>
+                                    <th>01</th>
+                                    <th>02</th>
+                                    <th>03</th>
+                                    <th>04</th>
+                                    <th>05</th>
+                                    <th>06</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PESO AO AR (g)</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1201,47
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1199,50
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1203,03
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                </tr>
+                                <tr>
+                                    <td>PESO AO AR (g)</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1201,47
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1199,50
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1203,03
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                </tr>
+                                <tr>
+                                    <td>PESO AO AR (g)</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1201,47
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1199,50
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1203,03
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                </tr>
+                                <tr>
+                                    <td>PESO AO AR (g)</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1201,47
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1199,50
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1203,03
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                </tr>
+                                <tr>
+                                    <td>PESO AO AR (g)</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1201,47
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1199,50
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1203,03
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                </tr>
+                                <tr>
+                                    <td>PESO AO AR (g)</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1201,47
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1199,50
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1203,03
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                </tr>
+                                <tr>
+                                    <td>PESO AO AR (g)</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1201,47
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1199,50
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1203,03
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                </tr>
+                                <tr>
+                                    <td>PESO AO AR (g)</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1201,47
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1199,50
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1203,03
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                </tr>
+                                <tr>
+                                    <td>PESO AO AR (g)</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1201,47
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1199,50
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1203,03
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                </tr>
+                                <tr>
+                                    <td>PESO AO AR (g)</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1201,47
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1199,50
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1203,03
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                </tr>
+                                <tr>
+                                    <td>PESO AO AR (g)</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1201,47
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1199,50
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1203,03
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                </tr>
+                                <tr>
+                                    <td>PESO AO AR (g)</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1201,47
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1199,50
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1203,03
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                </tr>
+                                <tr>
+                                    <td>PESO AO AR (g)</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1201,47
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1199,50
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1203,03
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                </tr>
+                                <tr>
+                                    <td>PESO AO AR (g)</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1201,47
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1199,50
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1203,03
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                </tr>
+                                <tr>
+                                    <td>PESO AO AR (g)</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1201,47
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1199,50
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1203,03
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                </tr>
+                                <tr>
+                                    <td>PESO AO AR (g)</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1201,47
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1199,50
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1203,03
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                </tr>
+                                <tr>
+                                    <td>PESO AO AR (g)</td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1201,47
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1199,50
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    >
+                                        1203,03
+                                    </td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                    <td
+                                        contenteditable="true"
+                                        style="background-color: yellow"
+                                    ></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <script>
+            window.onload = verificaLogin();
+        </script>
+    </body>
+</html>
