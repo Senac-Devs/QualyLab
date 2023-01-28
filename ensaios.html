@@ -12,6 +12,7 @@
         />
         <link rel="stylesheet" href="./css/index.css" />
         <script src="./js/login.js"></script>
+        <script src="./js/esxtracaoBetume.js"></script>
         <title>Index</title>
     </head>
     <body>
@@ -151,13 +152,19 @@
                                     <td>1"</td>
                                     <td>100,0</td>
                                     <td>100,0</td>
-                                    <td rowspan="2">PESO DA AMOSTRA</td>
+                                    <td rowspan="2">
+                                        PESO DA AMOSTRA COM BETUME
+                                    </td>
                                     <td
                                         rowspan="2"
                                         contenteditable="true"
                                         style="background-color: yellow"
                                     >
-                                        100,0
+                                        <input
+                                            type="number"
+                                            id="peso-amostra-com-betume"
+                                            placeholder="Amostra com Betume"
+                                        />
                                     </td>
                                 </tr>
                                 <tr>
@@ -187,13 +194,19 @@
                                     <td>3/8"</td>
                                     <td>100,0</td>
                                     <td>100,0</td>
-                                    <td rowspan="2">PESO DO BETUME</td>
+                                    <td rowspan="2">
+                                        PESO DA AMOSTRA SEM BETUME
+                                    </td>
                                     <td
                                         rowspan="2"
                                         contenteditable="true"
                                         style="background-color: yellow"
                                     >
-                                        0
+                                        <input
+                                            type="number"
+                                            id="peso-amostra-sem-betume"
+                                            placeholder="Amostra sem Betume"
+                                        />
                                     </td>
                                 </tr>
                                 <tr>
@@ -223,8 +236,20 @@
                                     <td>nº 10</td>
                                     <td>70,0</td>
                                     <td>70,0</td>
-                                    <td rowspan="2">PESO DA AMOSTRA</td>
-                                    <td rowspan="2">100,0</td>
+                                    <td rowspan="2">PESO DO BETUME</td>
+                                    <td rowspan="2">
+                                        <input
+                                            type="button"
+                                            value="Converter!"
+                                            onclick="pesoBetume()"
+                                        />
+                                        <input
+                                            type="number"
+                                            id="peso-do-betume"
+                                            placeholder="Peso Betume"
+                                            readonly
+                                        />
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>nº 40</td>
@@ -254,7 +279,19 @@
                                     <td>70,0</td>
                                     <td>70,0</td>
                                     <td>% DE BETUME</td>
-                                    <td>29,67</td>
+                                    <td>
+                                        <input
+                                            type="button"
+                                            value="Converter!"
+                                            onclick="porcentagemBetume()"
+                                        />
+                                        <input
+                                            type="number"
+                                            id="porcentagem-do-betume"
+                                            placeholder="% Betume"
+                                            readonly
+                                        />
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
