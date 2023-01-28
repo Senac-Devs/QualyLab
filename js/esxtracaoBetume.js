@@ -43,8 +43,7 @@ function porcentagemBetume() {
 
     const porcentagemBetume = porcentagem(pesoBetume, pesoAmostraCBetume);
 
-    document.getElementById("porcentagem-do-betume").value = parseFloat(
-        porcentagemBetume.toFixed(2)
-    );
+    document.getElementById("porcentagem-do-betume").value = 
+        porcentagemBetume.toFixed(2);
 
 }
