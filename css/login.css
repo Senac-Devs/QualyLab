@@ -1,189 +1,188 @@
 body {
-    font-family: "Ubuntu", sans-serif;
-    margin: 0;
-    background: url("../assets/background/estrada.jpg");
-    background-repeat: no-repeat;
-    background-size: 120% 120%;
-    height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  background: url('../assets/background/estrada.jpg');
+  background-repeat: no-repeat;
+  background-size: 120% 120%;
+  height: 100vh;
+}
+p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 18px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  max-width: 992px;
+  width: 100%;
+  display: flex;
+  box-shadow: 0px 0px 30px 7px rgba(255, 255, 255, 0.3);
+  background: rgb(7, 7, 7, 0.5);
+}
+.description {
+  display: flex;
+  color: white;
+  text-align: left;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  padding: 72px;
+}
+.login {
+  background: rgb(255, 255, 255, 0.6);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 384px;
+  height: 100%;
+}
+.login > h1 {
+  font-weight: 500;
+}
+.user {
+  background: url('../assets/icons/user.png') no-repeat left;
+  background-size: 26px;
+}
+.password {
+  background: url('../assets/icons/lock.png') no-repeat left;
+  background-size: 26px;
+}
+.user,
+.password {
+  padding-left: 34px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 200px;
+  margin-bottom: 12px;
+  border: none;
+  background-color: #f0f0f0;
+}
+input:focus {
+  outline: none;
+}
+.button {
+  padding: 8px;
+  width: 120px;
+  border: none;
+  background: linear-gradient(-45deg, #5a5a5a, #eeff51);
+  color: white;
+}
+.button:hover {
+  background: linear-gradient(-45deg, #eeff51, #5a5a5a);
+  font-weight: bold;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
   }
-  p {
-    margin: 0;
-    line-height: 1.5;
-    font-size: 18px;
+  50% {
+    background-position: 100% 50%;
   }
-  .container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
+  100% {
+    background-position: 0% 50%;
   }
+}
+
+.error {
+  border: 2px solid #c53030;
+}
+
+.toast {
+  display: none;
+  max-width: 275px;
+  max-height: 100px;
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  padding: 20px;
+  background-color: #c53030;
+  color: #fff;
+  border-radius: 10px 10px 0 10px;
+}
+
+.show {
+  display: block !important;
+}
+p {
+  color: #fff;
+  font-weight: bold;
+}
+.credit {
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  width: 100%;
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 90%;
+  padding-top: 40px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: normal;
+  align-items: flex-end;
+}
+
+img {
+  margin: 3px;
+  box-shadow: 0px 0px 30px 7px rgba(255, 255, 255, 0.2);
+}
+
+.toastTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.toastDescription {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media (max-width: 992px) {
   .card {
-    max-width: 992px;
-    width: 100%;
-    display: flex;
-    box-shadow: 0px 0px 30px 7px rgba(255, 255, 255, 0.3);
-    background: rgb(7, 7, 7, 0.5);
-  }
-  .description {
-    display: flex;
-    color: white;
-    text-align: left;
-    justify-content: center;
     flex-direction: column;
-    flex: 1;
-    padding: 72px;
+    max-width: 350px;
+    margin: 22px;
   }
   .login {
-    background: rgb(255, 255, 255, 0.6);
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 384px;
-    height: 100%;
-  }
-  .login > h1 {
-    font-weight: 500;
-  }
-  .user {
-    background: url("../assets/icons/user.png") no-repeat left;
-    background-size: 26px;
-  }
-  .password {
-    background: url("../assets/icons/lock.png") no-repeat left;
-    background-size: 26px;
-  }
-  .user,
-  .password {
-    padding-left: 34px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    width: 200px;
-    margin-bottom: 12px;
-    border: none;
-    background-color: #f0f0f0;
-  }
-  input:focus {
-    outline: none;
-  }
-  .button {
-    padding: 8px;
-    width: 120px;
-    border: none;
-    background: linear-gradient(-45deg, #5a5a5a, #eeff51);
-    color: white;
-  }
-  .button:hover {
-    background: linear-gradient(-45deg, #eeff51, #5a5a5a);
-    font-weight: bold;
-  }
-  
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-  .error {
-    border: 2px solid #c53030;
-  }
-  
-  .toast {
-    display: none;
-    max-width: 275px;
-    max-height: 100px;
-    position: fixed;
-    right: 14px;
-    bottom: 14px;
-    padding: 20px;
-    background-color: #c53030;
-    color: #fff;
-    border-radius: 10px 10px 0 10px;
-  }
-  
-  .show {
-    display: block !important;
-  }
-  p {
-    color: #fff;
-    font-weight: bold;
-  }
-  .credit{
-    color: #fff;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
     width: 100%;
+    min-height: 250px;
   }
-  
-  a {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 90%;
-    padding-top: 40px;
-    margin-bottom: 10px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: normal;
-    align-items: flex-end;
+  .description {
+    min-height: 260px;
+    padding: 30px;
   }
-  
-  img {
-    margin: 3px;
-    box-shadow: 0px 0px 30px 7px rgba(255, 255, 255, 0.2)
+  .description h1 {
+    margin: 6px;
   }
-    
+  .toast {
+    text-align: center;
+    left: 2%;
+    right: 2%;
+    bottom: 5px;
+    max-width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+  }
   .toastTitle {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
   }
-  
-  .toastDescription {
-    font-size: 14px;
-    font-weight: 400;
-  }
-  
-  @media (max-width: 992px) {
-    .card {
-      flex-direction: column;
-      max-width: 350px;
-      margin: 22px;
-    }
-    .login {
-      width: 100%;
-      min-height: 250px;
-    }
-    .description {
-      min-height: 260px;
-      padding: 30px;
-    }
-    .description h1 {
-      margin: 6px;
-    }
-    .toast {
-      text-align: center;
-      left: 2%;
-      right: 2%;
-      bottom: 5px;
-      max-width: 100%;
-      height: 40px;
-      padding: 10px;
-      border-radius: 10px 10px 0 0;
-    }
-    .toastTitle {
-      margin-bottom: 2px;
-    }
-  }
-  
+}

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,28 +13,82 @@
     <link rel="stylesheet" href="./css/index.css" />
     <script src="./js/login.js"></script>
     <title>Obras em Andamento</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>QualyLab</h1>
-        <section class="menu">
-            <a href="./index.html" id="sair" class="button">Obras em andamento</a>
-            <a href="./ensaios.html" id="sair" class="button">Ensaios</a>
-            <a href="./relatorios.html" id="sair" class="button">Relatórios</a>
-            <a href="./formulas.html" id="sair" class="button">Cadastrar fórmula</a>
-            <a href="./obras.html" id="sair" class="button">Cadastrar nova obra</a>
-            <a href="./devs.html" id="sair" class="button">Desenvolvedores</a>
-            <a href="" id="sair" class="button" onclick="deslogar()">Sair</a>
-    
-        </section>
+      <h1>QualyLab</h1>
+      <section class="menu">
+        <a href="./index.html" class="button">Obras em andamento</a>
+        <a href="./ensaios.html" class="button">Ensaios</a>
+        <a href="./relatorios.html" class="button">Relatórios</a>
+        <a href="./formulas.html" class="button">Cadastrar fórmula</a>
+        <a href="./obras.html" class="button">Cadastrar nova obra</a>
+        <a href="./devs.html" class="button">Desenvolvedores</a>
+        <a href="" class="button" onclick="deslogar()">Sair</a>
+      </section>
     </header>
     <main>
-        <section class="container">
-
-        </section>
+      <section class="container">
+        <div class="controle-card">
+          <div class="card">
+            <h2>Obra: PR-151</h2>
+            <img
+              class="rodovia"
+              src="./assets/card/pr-151.webp"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="card">
+            <h2>Obra: BR-153</h2>
+            <img
+              class="rodovia"
+              src="./assets/card/pr-151.webp"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="card">
+            <h2>Obra: BR-277</h2>
+            <img
+              class="rodovia"
+              src="./assets/card/pr-151.webp"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="card">
+            <h2>Obra: PR-317</h2>
+            <img
+              class="rodovia"
+              src="./assets/card/pr-151.webp"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="card">
+            <h2>Obra: PR-323</h2>
+            <img
+              class="rodovia"
+              src="./assets/card/pr-151.webp"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="card">
+            <h2>Obra: BR-369</h2>
+            <img
+              class="rodovia"
+              src="./assets/card/pr-151.webp"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+      </section>
     </main>
     <script>
-        window.onload = verificaLogin()
-      </script>
-</body>
+      window.onload = verificaLogin()
+    </script>
+  </body>
 </html>
