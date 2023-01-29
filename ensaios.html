@@ -7,12 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap"
+    rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/login.js"></script>
-    <script src="./js/esxtracaoBetume.js"></script>
+    
     <title>Index</title>
   </head>
   <body>
@@ -36,6 +37,7 @@
           <div class="linha1">
             <label for="">Rodovia</label>
             <select name="" id="">
+              <option value="">Selecione</option>
               <option value="PR-151">PR-151</option>
               <option value="PR-152">BR-153</option>
               <option value="PR-153">BR-277</option>
@@ -45,6 +47,7 @@
             </select>
             <label for="">Trecho</label>
             <select name="" id="">
+              <option value="">Selecione</option>
               <option value="Concreto Betumino Usinado a Quente">
                 Porto Emigdão (divisa PR/SP) - Entr. PR-431
               </option>
@@ -63,6 +66,7 @@
             </select>
             <label for="">Extensão</label>
             <select name="" id="">
+              <option value="">Selecione</option>
               <option value="12,93">12,93</option>
               <option value="14,50">14,50</option>
               <option value="20,80">20,80</option>
@@ -73,6 +77,7 @@
           <div class="linha2">
             <label for="">Estaca</label>
             <select name="" id="">
+              <option value="">Selecione</option>
               <option value="83+10 LE">83+10 LE</option>
               <option value="50+5 LE">50+5 LE</option>
               <option value="60 LE">60 LE</option>
@@ -81,6 +86,7 @@
             </select>
             <label for="">Tipo de Serviço</label>
             <select name="" id="">
+              <option value="">Selecione</option>
               <option value="Concreto Betuminoso Usinado a Quente">
                 Concreto Betuminoso Usinado a Quente
               </option>
@@ -95,6 +101,9 @@
               </option>
               <option value="Concreto Betuminoso Usinado a Vento">
                 Concreto Betuminoso Usinado a Vento
+              </option>
+              <option value="Concreto Betuminoso Usinado a Pressão">
+                Concreto Betuminoso Usinado a Pressão
               </option>
             </select>
             <label for="">Data</label>
@@ -121,78 +130,136 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>1"</td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;"></td>
-                  <td>0,00</td>
-                  <td>0,00</td>
-                  <td>100,00</td>
-                  <td>100,0</td>
-                  <td>100,0</td>
-                  <td rowspan="2">
+                  <th>1"</th>
+                  <td style="background-color: #bfbfbf;">
+                    <input class="input-cel" type="number" id="retida1" min="0" />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="retida-porcent-1" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="retida-porcent-acum-1" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="pass1" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <th rowspan="2">
                     PESO DA AMOSTRA COM BETUME
-                  </td>
-                  <td
-                    rowspan="2"
-                    contenteditable="true"
-                    style="background-color: #bfbfbf;"
-                    id="peso-amostra-com-betume"
-                  >
+                  </th>
+                  <td rowspan="2" style="background-color: #bfbfbf;">
+                    <input
+                      class="input-cel"
+                      type="number"
+                      id="peso-amostra-com-betume"
+                      min="0"
+                    />
                   </td>
                 </tr>
                 <tr>
-                  <td>3/4"</td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;"></td>
-                  <td>0,00</td>
-                  <td>0,00</td>
-                  <td>100,00</td>
-                  <td>90,0</td>
-                  <td>100,0</td>
+                  <th>3/4"</th>
+                  <td style="background-color: #bfbfbf;">
+                    <input class="input-cel" type="number" id="retida2" min="0" />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="retida-porcent-2" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="retida-porcent-acum-2" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="pass2" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
                 </tr>
                 <tr>
-                  <td>3/8"</td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;"></td>
+                  <th>3/8"</th>
+                  <td style="background-color: #bfbfbf;">
+                    <input class="input-cel" type="number" id="retida3" min="0" />
                   </td>
-                  <td>29,13</td>
-                  <td>29,13</td>
-                  <td>70,87</td>
-                  <td>56,0</td>
-                  <td>80,0</td>
-                  <td rowspan="2">
+                  <td>
+                    <input class="input-cel" id="retida-porcent-3" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="retida-porcent-acum-3" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="pass3" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <th rowspan="2">
                     PESO DA AMOSTRA SEM BETUME
-                  </td>
-                  <td
-                  rowspan="2"
-                  contenteditable="true"
-                  style="background-color: #bfbfbf;"
-                  id="peso-amostra-sem-betume"
-                  onkeyup="pesoBetume()"
-                  >
-                  
+                  </th>
+                  <td rowspan="2" style="background-color: #bfbfbf;">
+                    <input
+                      onkeyup="pesoBetume()"
+                      class="input-cel"
+                      type="number"
+                      id="peso-amostra-sem-betume"
+                      min="0"
+                    />
                   </td>
                 </tr>
                 <tr>
-                  <td>nº 4</td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
+                  <th>nº 4</th>
+                  <td style="background-color: #bfbfbf;">
+                    <input class="input-cel" type="number" id="retida4" min="0" />
                   </td>
-                  <td>20,54</td>
-                  <td>49,67</td>
-                  <td>50,33</td>
-                  <td>35,0</td>
-                  <td>65,0</td>
+                  <td>
+                    <input class="input-cel" id="retida-porcent-4" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="retida-porcent-acum-4" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="pass4" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
                 </tr>
                 <tr>
-                  <td>nº 10</td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
+                  <th>nº 10</th>
+                  <td style="background-color: #bfbfbf;">
+                    <input class="input-cel" type="number" id="retida5" min="0" />
                   </td>
-                  <td>15,56</td>
-                  <td>65,23</td>
-                  <td>34,77</td>
-                  <td>22,0</td>
-                  <td>46,0</td>
-                  <td rowspan="2">PESO DO BETUME</td>
+                  <td>
+                    <input class="input-cel" id="retida-porcent-5" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="retida-porcent-acum-5" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="pass5" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <th rowspan="2">PESO DO BETUME</th>
                   <td rowspan="2">
                     <input
-                    class="input-cel"
+                      class="input-cel"
                       type="number"
                       id="peso-do-betume"
                       placeholder="Peso Betume"
@@ -201,28 +268,50 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>nº 40</td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
+                  <th>nº 40</th>
+                  <td style="background-color: #bfbfbf;">
+                    <input class="input-cel" type="number" id="retida6" min="0" />
                   </td>
-                  <td>17,90</td>
-                  <td>83,13</td>
-                  <td>16,87</td>
-                  <td>8,0</td>
-                  <td>24,0</td>
+                  <td>
+                    <input class="input-cel" id="retida-porcent-6" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="retida-porcent-acum-6" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="pass6" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
                 </tr>
                 <tr>
-                  <td>nº 200</td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
+                  <th>nº 200</th>
+                  <td style="background-color: #bfbfbf;">
+                    <input class="input-cel" type="number" id="retida7" min="0" />
                   </td>
-                  <td>11,51</td>
-                  <td>94,64</td>
-                  <td>5,36</td>
-                  <td>2,0</td>
-                  <td>8,0</td>
-                  <td>% DE BETUME</td>
+                  <td>
+                    <input class="input-cel" id="retida-porcent-7" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="retida-porcent-acum-7" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="pass7" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <th>% DE BETUME</th>
                   <td>
                     <input
-                    class="input-cel"
+                      class="input-cel"
                       id="porcentagem-do-betume"
                       type="number"
                       placeholder="% Betume"
@@ -236,44 +325,6 @@
             <div>
               <canvas style="background-color: #ffffff;" id="myChart"></canvas>
             </div>
-
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-            <script>
-              const ctx = document.getElementById('myChart')
-
-              new Chart(ctx, {
-                type: 'line',
-                data: {
-                  labels: ['0,0', '0,1', '5,0', '1,0', '10,0', '50,0', '100,0'],
-                  datasets: [
-                    {
-                      label: 'Séries 4',
-                      data: [
-                        { y: 8, x: 0.9 },
-                        { x: 0.42, y: 17 },
-                        { x: 0.09, y: 8 },
-                        { x: 0.09, y: 8 },
-                        { x: 0.09, y: 8 },
-                        { x: 0.09, y: 8 },
-                        { x: 0.09, y: 8 },
-                      ],
-                      borderWidth: 1,
-                    },
-                    {
-                      label: 'Séries 5',
-                      data: [0.09, 2, 12, 23, 34, 45, 100],
-                      borderWidth: 1,
-                    },
-                    {
-                      label: 'Séries 6',
-                      data: [0.09, 0.5, 6, 15, 20, 30, 90],
-                      borderWidth: 1,
-                    },
-                  ],
-                },
-              })
-            </script>
 
             <table>
               <thead>
@@ -293,22 +344,25 @@
                   <th
                     rowspan="17"
                     style="
-                      writing-mode: vertical-rl;
-                      transform: rotate(180deg);
+                    writing-mode: vertical-rl;
+                    transform: rotate(180deg);
                     "
                   >
-                    ESTABILIDADE MARSHALL
-                  </th>
-                  <td>PESO AO AR (g)</td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    0,00
-                  </td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    0,00
-                  </td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    0,00
-                  </td>
+                  ESTABILIDADE MARSHALL
+                </th>
+                  <th>PESO AO AR (g)</th>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
                   <td
                     contenteditable="true"
                     style="background-color: #bfbfbf;"
@@ -323,16 +377,19 @@
                   ></td>
                 </tr>
                 <tr>
-                  <td>PESO IMERSO</td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    0,00
-                  </td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    0,00
-                  </td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    0,00
-                  </td>
+                  <th>PESO IMERSO</th>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
                   <td
                     contenteditable="true"
                     style="background-color: #bfbfbf;"
@@ -347,79 +404,166 @@
                   ></td>
                 </tr>
                 <tr>
-                  <td>VOLUME DO CORPO DE PROVA</td>
-                  <td>483,3</td>
-                  <td>482,9</td>
-                  <td>483,9</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>DENSIDADE APARENTE</td>
-                  <td>2,486</td>
-                  <td>2,591</td>
-                  <td>2,591</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>DENSIDADE RICE</td>
-                  <td>2,591</td>
-                  <td>2,591</td>
-                  <td>2591</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>% VAZIOS</td>
-                  <td>4,05</td>
-                  <td>4,13</td>
-                  <td>4,05</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>% V.C.B.</td>
-                  <td>12,79</td>
-                  <td>12,78</td>
-                  <td>12,79</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>% V.A.M.</td>
-                  <td>16,84</td>
-                  <td>16,91</td>
-                  <td>16,84</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>% R.B.V.</td>
-                  <td>75,93</td>
-                  <td>75,57</td>
-                  <td>75,96</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>LEITURA DO DEFLECTÔMETRO</td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    525,00
+                  <th>VOLUME DO CORPO DE PROVA</th>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
                   </td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    545,00
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
                   </td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    562,00
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
                   </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                </tr>
+                <tr>
+                  <th>DENSIDADE APARENTE</th>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                </tr>
+                <tr>
+                  <th>DENSIDADE RICE</th>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                </tr>
+                <tr>
+                  <th>% VAZIOS</th>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                </tr>
+                <tr>
+                  <th>% V.C.B.</th>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                </tr>
+                <tr>
+                  <th>% V.A.M.</th>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                </tr>
+                <tr>
+                  <th>% R.B.V.</th>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                </tr>
+                <tr>
+                  <th>LEITURA DO DEFLECTÔMETRO</th>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
                   <td
                     contenteditable="true"
                     style="background-color: #bfbfbf;"
@@ -434,34 +578,49 @@
                   ></td>
                 </tr>
                 <tr>
-                  <td>ESTABILIDADE LIDA</td>
-                  <td>1059,98</td>
-                  <td>1100,36</td>
-                  <td>1134,68</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <th>ESTABILIDADE LIDA</th>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
                 </tr>
                 <tr>
-                  <td>ESTABILIDADE CORRIGIDA</td>
-                  <td>1187,17</td>
-                  <td>1232,40</td>
-                  <td>1270,84</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <th>ESTABILIDADE CORRIGIDA</th>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
                 </tr>
                 <tr>
-                  <td>FLUÊNCIA LEITURA INICIAL</td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    2,60
-                  </td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    2,70
-                  </td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    2,30
-                  </td>
+                  <th>FLUÊNCIA LEITURA INICIAL</th>
                   <td
                     contenteditable="true"
                     style="background-color: #bfbfbf;"
@@ -474,51 +633,6 @@
                     contenteditable="true"
                     style="background-color: #bfbfbf;"
                   ></td>
-                </tr>
-                <tr>
-                  <td>FLUÊNCIA LEITURA FINAL</td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    5,50
-                  </td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    5,70
-                  </td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    5,40
-                  </td>
-                  <td
-                    contenteditable="true"
-                    style="background-color: #bfbfbf;"
-                  ></td>
-                  <td
-                    contenteditable="true"
-                    style="background-color: #bfbfbf;"
-                  ></td>
-                  <td
-                    contenteditable="true"
-                    style="background-color: #bfbfbf;"
-                  ></td>
-                </tr>
-                <tr>
-                  <td>FLUÊNCIA (mm)</td>
-                  <td>2,90</td>
-                  <td>3,00</td>
-                  <td>3,10</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>FATOR DE CORREÇÃO</td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    1,12
-                  </td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    1,12
-                  </td>
-                  <td contenteditable="true" style="background-color: #bfbfbf;">
-                    1,12
-                  </td>
                   <td
                     contenteditable="true"
                     style="background-color: #bfbfbf;"
@@ -533,21 +647,105 @@
                   ></td>
                 </tr>
                 <tr>
-                  <td>FILLER/BETUME</td>
-                  <td colspan="3">
-                    0,98
+                  <th>FLUÊNCIA LEITURA FINAL</th>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                </tr>
+                <tr>
+                  <th>FLUÊNCIA (mm)</th>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
                   </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                </tr>
+                <tr>
+                  <th>FATOR DE CORREÇÃO</th>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                  <td
+                    contenteditable="true"
+                    style="background-color: #bfbfbf;"
+                  ></td>
+                </tr>
+                <tr>
+                  <th>FILLER/BETUME</th>
+                  <td colspan="3"></td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
+                  <td>
+                    <input class="input-cel" id="" type="number" readonly />
+                  </td>
                 </tr>
               </tbody>
             </table>
+            <button class="button" type="submit" onclick="salvar()">
+              Salvar
+            </button>
           </div>
         </form>
       </section>
     </main>
+    <script src="./js/script.js"></script>
     <script src="path/to/chartjs/dist/chart.umd.js"></script>
+    <script src="./js/esxtracaoBetume.js"></script>
     <script>
       window.onload = verificaLogin()
     </script>
