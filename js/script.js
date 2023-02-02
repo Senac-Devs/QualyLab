@@ -5,5 +5,12 @@ function relatorioDemo() {
 }
 
 function salvar() {
-    confirm('Deseja salvar');
+    const resposta = confirm('Deseja Confirmar?');
+
+    if (resposta === true){
+      const menu = document.getElementsByClassName("menu");
+      console.log(menu)
+      menu[0].style.display = 'nome';
+      window.print();
+    }
 }

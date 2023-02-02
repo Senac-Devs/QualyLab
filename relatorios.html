@@ -1,85 +1,604 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/index.css" />
 
-    <script src="./js/script.js"></script>
-    <script src="./js/login.js"></script>
-    <title>Index</title>
-  </head>
-  <body>
-    <header>
-      <h1>QualyLab</h1>
-      <section class="menu">
-        <a href="./index.html" class="button">Obras em andamento</a>
-        <a href="./ensaios.html" class="button">Ensaios</a>
-        <a href="./relatorios.html" class="button">Relatórios</a>
-        <a href="./formulas.html" class="button">Cadastrar fórmula</a>
-        <a href="./obras.html" class="button">Cadastrar nova obra</a>
-        <a href="./devs.html" class="button">Desenvolvedores</a>
-        <a href="" class="button" onclick="deslogar()">Sair</a>
-      </section>
-    </header>
-    <main>
-      <div class="container">
-        <div class="relatorio">
-          
-            <label for="">Rodovia</label>
-            <select name="" id="">
-              <option value="Selecione">Selecione</option>
-              <option value="PR-151">PR-151</option>
-              <option value="PR-152">BR-153</option>
-              <option value="PR-153">BR-277</option>
-              <option value="PR-154">PR-323</option>
-              <option value="PR-154">PR-317</option>
-              <option value="PR-155">BR-369</option>
-            </select>
-            <label for="">Tipo de Serviço</label>
-            <select name="" id="">
-              <option value="">Selecione</option>
-              <option value="Concreto Betuminoso Usinado a Quente">
-                Concreto Betuminoso Usinado a Quente
-              </option>
-              <option value="Concreto Betuminoso Usinado a Frio">
-                Concreto Betuminoso Usinado a Frio
-              </option>
-              <option value="Concreto Betuminoso Usinado a Água">
-                Concreto Betuminoso Usinado a Água
-              </option>
-              <option value="Concreto Betuminoso Usinado a Cera">
-                Concreto Betuminoso Usinado a Cera
-              </option>
-              <option value="Concreto Betuminoso Usinado a Vento">
-                Concreto Betuminoso Usinado a Vento
-              </option>
-              <option value="Concreto Betuminoso Usinado a Pressão">
-                Concreto Betuminoso Usinado a Pressão
-              </option>
-            </select>
-            <label for="">Data</label>
-            <input type="date" onkeypress="relatorioDemo()"/>
-            <button
-            class="button"
-              type="button"
-              onclick="window.print()"
-            >
-              Imprimir
-            </button>
-            <div id="rel-demo"><img src="" alt="" srcset=""></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./js/login.js"></script>
+  <title>Index</title>
+</head>
+
+<body>
+  <header>
+    <h1>QualyLab</h1>
+    <section class="menu">
+      <a href="./index.html" class="button">Obras em andamento</a>
+      <a href="./ensaios.html" class="button">Ensaios</a>
+      <a href="./relatorios.html" class="button">Relatórios</a>
+      <a href="./formulas.html" class="button">Cadastrar fórmula</a>
+      <a href="./obras.html" class="button">Cadastrar nova obra</a>
+      <a href="./devs.html" class="button">Desenvolvedores</a>
+      <a href="" class="button" onclick="deslogar()">Sair</a>
+    </section>
+  </header>
+  <main>
+    <div class="container">
+      <div class="relatorio">
+
+        <label for="">Rodovia</label>
+        <select name="" id="">
+          <option value="Selecione">Selecione</option>
+          <option value="PR-151">PR-151</option>
+          <option value="PR-152">BR-153</option>
+          <option value="PR-153">BR-277</option>
+          <option value="PR-154">PR-323</option>
+          <option value="PR-154">PR-317</option>
+          <option value="PR-155">BR-369</option>
+        </select>
+        <label for="">Tipo de Serviço</label>
+        <select name="" id="">
+          <option value="">Selecione</option>
+          <option value="Concreto Betuminoso Usinado a Quente">
+            Concreto Betuminoso Usinado a Quente
+          </option>
+          <option value="Concreto Betuminoso Usinado a Frio">
+            Concreto Betuminoso Usinado a Frio
+          </option>
+          <option value="Concreto Betuminoso Usinado a Água">
+            Concreto Betuminoso Usinado a Água
+          </option>
+          <option value="Concreto Betuminoso Usinado a Cera">
+            Concreto Betuminoso Usinado a Cera
+          </option>
+          <option value="Concreto Betuminoso Usinado a Vento">
+            Concreto Betuminoso Usinado a Vento
+          </option>
+          <option value="Concreto Betuminoso Usinado a Pressão">
+            Concreto Betuminoso Usinado a Pressão
+          </option>
+        </select>
+        <label for="">Data</label>
+        <input type="date" onkeypress="relatorioDemo()" />
+        <button type="button" onclick="preencheRelatorio()">
+          Consultar
+        </button>
+        <button type="button" onclick="salvar()">
+          Imprimir
+        </button>
+        <div id="rel-demo"><img src="" alt="" srcset=""></div>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th rowspan="3">Peneiras</th>
+                <th rowspan="3">Peso Retido (g)</th>
+                <th rowspan="3">(%)Retida</th>
+                <th rowspan="3">(%) Retida Acumulada</th>
+                <th rowspan="3">(%) Passando</th>
+                <th colspan="2">Faixa C DER/PR</th>
+                <th colspan="2">Extração de Betume</th>
+              </tr>
+              <tr>
+                <th>MÍN.</th>
+                <th>MÁX.</th>
+                <th>TIPO DE LIGANTE</th>
+                <th>CAP - 50/70</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1"</th>
+                <td style="background-color: #bfbfbf">
+                  <input class="input-cel" type="number" id="retida1" min="0" onkeyup="pesoBetume()" />
+                </td>
+                <td>
+                  <input class="input-cel" id="retida-porcent-1" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="retida-porcent-acum-1" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="pass1" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" value="100" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" value="100" readonly />
+                </td>
+                <th rowspan="2">
+                  PESO DA AMOSTRA COM BETUME
+                </th>
+                <td rowspan="2" style="background-color: #bfbfbf">
+                  <input class="input-cel" type="number" id="peso-amostra-com-betume" min="0" onkeyup="pesoBetume()" />
+                </td>
+              </tr>
+              <tr>
+                <th>3/4"</th>
+                <td style="background-color: #bfbfbf">
+                  <input class="input-cel" type="number" id="retida2" min="0" onkeyup="pesoBetume()" />
+                </td>
+                <td>
+                  <input class="input-cel" id="retida-porcent-2" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="retida-porcent-acum-2" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="pass2" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" value="90" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" value="100" readonly />
+                </td>
+              </tr>
+              <tr>
+                <th>3/8"</th>
+                <td style="background-color: #bfbfbf">
+                  <input class="input-cel" type="number" id="retida3" min="0" onkeyup="pesoBetume()" />
+                </td>
+                <td>
+                  <input class="input-cel" id="retida-porcent-3" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="retida-porcent-acum-3" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="pass3" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" value="56" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" value="80" readonly />
+                </td>
+                <th rowspan="2">
+                  PESO DA AMOSTRA SEM BETUME
+                </th>
+                <td rowspan="2" style="background-color: #bfbfbf">
+                  <input onkeyup="pesoBetume()" class="input-cel" type="number" id="peso-amostra-sem-betume" min="0" />
+                </td>
+              </tr>
+              <tr>
+                <th>nº 4</th>
+                <td style="background-color: #bfbfbf">
+                  <input class="input-cel" type="number" id="retida4" min="0" onkeyup="pesoBetume()" />
+                </td>
+                <td>
+                  <input class="input-cel" id="retida-porcent-4" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="retida-porcent-acum-4" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="pass4" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" value="35" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" value="65" readonly />
+                </td>
+              </tr>
+              <tr>
+                <th>nº 10</th>
+                <td style="background-color: #bfbfbf">
+                  <input class="input-cel" type="number" id="retida5" min="0" onkeyup="pesoBetume()" />
+                </td>
+                <td>
+                  <input class="input-cel" id="retida-porcent-5" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="retida-porcent-acum-5" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="pass5" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" value="22" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" value="46" readonly />
+                </td>
+                <th rowspan="2">PESO DO BETUME</th>
+                <td rowspan="2">
+                  <input class="input-cel" type="number" id="peso-do-betume" placeholder="Peso Betume" readonly />
+                </td>
+              </tr>
+              <tr>
+                <th>nº 40</th>
+                <td style="background-color: #bfbfbf">
+                  <input class="input-cel" type="number" id="retida6" min="0" onkeyup="pesoBetume()" />
+                </td>
+                <td>
+                  <input class="input-cel" id="retida-porcent-6" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="retida-porcent-acum-6" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="pass6" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" value="8" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" value="24" readonly />
+                </td>
+              </tr>
+              <tr>
+                <th>nº 200</th>
+                <td style="background-color: #bfbfbf">
+                  <input class="input-cel" type="number" id="retida7" min="0" onkeyup="pesoBetume()" />
+                </td>
+                <td>
+                  <input class="input-cel" id="retida-porcent-7" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="retida-porcent-acum-7" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="pass7" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" value="2" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" value="8" readonly />
+                </td>
+                <th>% DE BETUME</th>
+                <td>
+                  <input class="input-cel" id="porcentagem-do-betume" type="number" placeholder="% Betume" readonly />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div>
+            <canvas style="background-color: #ffffff" id="myChart"></canvas>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>CORPO DE PROVA Nº</th>
+                <th>01</th>
+                <th>02</th>
+                <th>03</th>
+                <th>04</th>
+                <th>05</th>
+                <th>06</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th rowspan="17" style="
+                                  writing-mode: vertical-rl;
+                                  transform: rotate(180deg);
+                              ">
+                  ESTABILIDADE MARSHALL
+                </th>
+                <th>PESO AO AR (g)</th>
+                <td contenteditable="true" style="background-color: #bfbfbf">
+                  <input class="input-cel" type="number" id="peso-ar-cp1" min="0" />
+                </td>
+                <td contenteditable="true" style="background-color: #bfbfbf">
+                  <input class="input-cel" type="number" id="peso-ar-cp2" min="0" />
+                </td>
+                <td contenteditable="true" style="background-color: #bfbfbf">
+                  <input class="input-cel" type="number" id="peso-ar-cp3" min="0" />
+                </td>
+                <td contenteditable="true" style="background-color: #bfbfbf">
+                  <input class="input-cel" type="number" id="peso-ar-cp4" min="0" />
+                </td>
+                <td contenteditable="true" style="background-color: #bfbfbf">
+                  <input class="input-cel" type="number" id="peso-ar-cp5" min="0" />
+                </td>
+                <td contenteditable="true" style="background-color: #bfbfbf">
+                  <input class="input-cel" type="number" id="peso-ar-cp6" min="0" />
+                </td>
+              </tr>
+              <tr>
+                <th>PESO IMERSO</th>
+                <td contenteditable="true" style="background-color: #bfbfbf">
+                  <input onkeyup="volumeCP1()" class="input-cel" type="number" id="peso-imerso-cp1" min="0" />
+                </td>
+                <td contenteditable="true" style="background-color: #bfbfbf">
+                  <input onkeyup="volumeCP2()" class="input-cel" type="number" id="peso-imerso-cp2" min="0" />
+                </td>
+                <td contenteditable="true" style="background-color: #bfbfbf">
+                  <input onkeyup="volumeCP3()" class="input-cel" type="number" id="peso-imerso-cp3" min="0" />
+                </td>
+                <td contenteditable="true" style="background-color: #bfbfbf">
+                  <input onkeyup="volumeCP4()" class="input-cel" type="number" id="peso-imerso-cp4" min="0" />
+                </td>
+                <td contenteditable="true" style="background-color: #bfbfbf">
+                  <input onkeyup="volumeCP5()" class="input-cel" type="number" id="peso-imerso-cp5" min="0" />
+                </td>
+                <td contenteditable="true" style="background-color: #bfbfbf">
+                  <input onkeyup="volumeCP6()" class="input-cel" type="number" id="peso-imerso-cp6" min="0" />
+                </td>
+              </tr>
+              <tr>
+                <th>VOLUME DO CORPO DE PROVA</th>
+                <td>
+                  <input class="input-cel" id="volume-cp1" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="volume-cp2" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="volume-cp3" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="volume-cp4" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="volume-cp5" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="volume-cp6" type="number" readonly />
+                </td>
+              </tr>
+              <tr>
+                <th>DENSIDADE APARENTE</th>
+                <td>
+                  <input class="input-cel" id="densidade-ap-cp1" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="densidade-ap-cp2" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="densidade-ap-cp3" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="densidade-ap-cp4" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="densidade-ap-cp5" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="densidade-ap-cp6" type="number" readonly />
+                </td>
+              </tr>
+              <tr>
+                <th>DENSIDADE RICE</th>
+                <td>
+                  <input class="input-cel" id="densidade-rice-cp1" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="densidade-rice-cp2" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="densidade-rice-cp3" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="densidade-rice-cp4" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="densidade-rice-cp5" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="densidade-rice-cp6" type="number" readonly />
+                </td>
+              </tr>
+              <tr>
+                <th>% VAZIOS</th>
+                <td>
+                  <input class="input-cel" id="porcentagem-vaios-cp1" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="porcentagem-vaios-cp2" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="porcentagem-vaios-cp3" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="porcentagem-vaios-cp4" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="porcentagem-vaios-cp5" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="porcentagem-vaios-cp6" type="number" readonly />
+                </td>
+              </tr>
+              <tr>
+                <th>% V.C.B.</th>
+                <td>
+                  <input class="input-cel" id="vcb-cp1" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="vcb-cp2" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="vcb-cp3" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="vcb-cp4" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="vcb-cp5" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="vcb-cp6" type="number" readonly />
+                </td>
+              </tr>
+              <tr>
+                <th>% V.A.M.</th>
+                <td>
+                  <input class="input-cel" id="vam-cp1" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="vam-cp2" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="vam-cp3" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="vam-cp4" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="vam-cp5" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="vam-cp6" type="number" readonly />
+                </td>
+              </tr>
+              <tr>
+                <th>% R.B.V.</th>
+                <td>
+                  <input class="input-cel" id="rbv-cp1" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="rbv-cp2" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="rbv-cp3" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="rbv-cp4" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="rbv-cp5" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="rbv-cp6" type="number" readonly />
+                </td>
+              </tr>
+              <tr>
+                <th>LEITURA DO DEFLECTÔMETRO</th>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+              </tr>
+              <tr>
+                <th>ESTABILIDADE LIDA</th>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+              </tr>
+              <tr>
+                <th>ESTABILIDADE CORRIGIDA</th>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+              </tr>
+              <tr>
+                <th>FLUÊNCIA LEITURA INICIAL</th>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+              </tr>
+              <tr>
+                <th>FLUÊNCIA LEITURA FINAL</th>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+              </tr>
+              <tr>
+                <th>FLUÊNCIA (mm)</th>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+              </tr>
+              <tr>
+                <th>FATOR DE CORREÇÃO</th>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+                <td contenteditable="true" style="background-color: #bfbfbf"></td>
+              </tr>
+              <tr>
+                <th>FILLER/BETUME</th>
+                <td colspan="3"></td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+                <td>
+                  <input class="input-cel" id="" type="number" readonly />
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-    </main>
-    <script>
-      window.onload = verificaLogin()
-    </script>
-  </body>
+    </div>
+  </main>
+  <script src="./js/script.js"></script>
+  <script src="path/to/chartjs/dist/chart.umd.js"></script>
+  <script src="./js/esxtracaoBetume.js"></script>
+  <script>
+    window.onload = verificaLogin()
+  </script>
+</body>
+
 </html>

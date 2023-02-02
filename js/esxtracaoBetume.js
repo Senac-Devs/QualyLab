@@ -164,6 +164,43 @@ function porcentagemPassando() {
     pass6.value = (100 - parseFloat(retidaPorcentAcum6)).toFixed(2);
     pass7.value = (100 - parseFloat(retidaPorcentAcum7)).toFixed(2);
 }
+function preencheRelatorio() {
+    
+    const retida1 = document.getElementById("retida1");
+    const retida2 = document.getElementById("retida2");
+    const retida3 = document.getElementById("retida3");
+    const retida4 = document.getElementById("retida4");
+    const retida5 = document.getElementById("retida5");
+    const retida6 = document.getElementById("retida6");
+    const retida7 = document.getElementById("retida7");
+    const pesoAmostraCBetume = document.getElementById("peso-amostra-com-betume");
+    const pesoAmostraSBetume = document.getElementById("peso-amostra-sem-betume");
+    const pesoArCP1 = document.getElementById("peso-ar-cp1");
+    const pesoImersoCP1 = document.getElementById("peso-imerso-cp1");
+    const pesoArCP2 = document.getElementById("peso-ar-cp2");
+    const pesoImersoCP2 = document.getElementById("peso-imerso-cp2")
+
+    retida1.value = geraRandom(0, 1)
+    retida2.value = geraRandom(0, 1)
+    retida3.value = geraRandom(0, 175)
+    retida4.value = geraRandom(0, 175)
+    retida5.value = geraRandom(0, 175)
+    retida6.value = geraRandom(0, 175)
+    retida7.value = geraRandom(0, 175)
+    pesoAmostraCBetume.value = geraRandom(450, 1050)
+    pesoAmostraSBetume.value = geraRandom(450, 1050)
+    pesoBetume()
+    pesoArCP1.value = geraRandom(1100, 1210)
+    pesoImersoCP1.value = geraRandom(690, 730)
+    pesoArCP2.value = geraRandom(1100, 1210)
+    pesoImersoCP2.value = geraRandom(690, 730)
+    volumeCP1()
+    volumeCP2()
+
+}
+function geraRandom(min, max) {
+    return (Math.random() * (max - min) + min).toFixed(2);
+}
 
 const ctx = document.getElementById("myChart");
 const pass1 = document.getElementById("pass1");
@@ -326,9 +363,9 @@ function vamCP1() {
     const vamCP1 = porcVaziosCP1 + vcbCP1;
 
     document.getElementById("vam-cp1").value = parseFloat(vamCP1.toFixed(2));
-  }
+}
 
-  function rbvCP1() {
+function rbvCP1() {
     const vcbCP1 = parseFloat(document.getElementById("vcb-cp1").value);
 
     const vamCP1 = parseFloat(document.getElementById("vam-cp1").value);
@@ -336,193 +373,193 @@ function vamCP1() {
     const rbvCP1 = (vcbCP1 / vamCP1) * 100;
 
     document.getElementById("rbv-cp1").value = parseFloat(rbvCP1.toFixed(2));
-  }
+}
 
-  //estabilidade marshall cp2
+//estabilidade marshall cp2
 function volumeCP2() {
-  const pesoArCP2 = parseFloat(document.getElementById("peso-ar-cp2").value);
+    const pesoArCP2 = parseFloat(document.getElementById("peso-ar-cp2").value);
 
-  const pesoImersoCP2 = parseFloat(
-      document.getElementById("peso-imerso-cp2").value
-  );
+    const pesoImersoCP2 = parseFloat(
+        document.getElementById("peso-imerso-cp2").value
+    );
 
-  const volumeCP2 = pesoArCP2 - pesoImersoCP2;
+    const volumeCP2 = pesoArCP2 - pesoImersoCP2;
 
-  document.getElementById("volume-cp2").value = parseFloat(
-      volumeCP2.toFixed(2)
-  );
+    document.getElementById("volume-cp2").value = parseFloat(
+        volumeCP2.toFixed(2)
+    );
 
-  densidadeApCP2();
-  densidadeRiceCP2();
-  porcVaziosCP2();
-  vcbCP2();
-  vamCP2();
-  rbvCP2();
+    densidadeApCP2();
+    densidadeRiceCP2();
+    porcVaziosCP2();
+    vcbCP2();
+    vamCP2();
+    rbvCP2();
 }
 
 function densidadeApCP2() {
-  const pesoArCP2 = parseFloat(document.getElementById("peso-ar-cp2").value);
+    const pesoArCP2 = parseFloat(document.getElementById("peso-ar-cp2").value);
 
-  const volumeCP2 = parseFloat(document.getElementById("volume-cp2").value);
+    const volumeCP2 = parseFloat(document.getElementById("volume-cp2").value);
 
-  const densidadeAPCP2 = pesoArCP2 / volumeCP2;
+    const densidadeAPCP2 = pesoArCP2 / volumeCP2;
 
-  document.getElementById("densidade-ap-cp2").value = parseFloat(
-      densidadeAPCP2.toFixed(3)
-  );
+    document.getElementById("densidade-ap-cp2").value = parseFloat(
+        densidadeAPCP2.toFixed(3)
+    );
 }
 
 function densidadeRiceCP2() {
-  const densidadeRiceCP2 = 2.591;
-  document.getElementById("densidade-rice-cp2").value = parseFloat(
-      densidadeRiceCP2.toFixed(3)
-  );
+    const densidadeRiceCP2 = 2.591;
+    document.getElementById("densidade-rice-cp2").value = parseFloat(
+        densidadeRiceCP2.toFixed(3)
+    );
 }
 
 function porcVaziosCP2() {
-  const densidadeRiceCP2 = 2.591;
+    const densidadeRiceCP2 = 2.591;
 
-  const densidadeAPCP2 = parseFloat(
-      document.getElementById("densidade-ap-cp2").value
-  );
+    const densidadeAPCP2 = parseFloat(
+        document.getElementById("densidade-ap-cp2").value
+    );
 
-  const porcVaziosCP2 =
-      ((densidadeRiceCP2 - densidadeAPCP2) / densidadeRiceCP2) * 100;
+    const porcVaziosCP2 =
+        ((densidadeRiceCP2 - densidadeAPCP2) / densidadeRiceCP2) * 100;
 
-  document.getElementById("porcentagem-vaios-cp2").value = parseFloat(
-      porcVaziosCP2.toFixed(2)
-  );
+    document.getElementById("porcentagem-vaios-cp2").value = parseFloat(
+        porcVaziosCP2.toFixed(2)
+    );
 }
 
 function vcbCP2() {
-  const densidadeCap = 1.01;
+    const densidadeCap = 1.01;
 
-  const densidadeAPCP2 = parseFloat(
-      document.getElementById("densidade-ap-cp2").value
-  );
+    const densidadeAPCP2 = parseFloat(
+        document.getElementById("densidade-ap-cp2").value
+    );
 
-  const porcBetume = parseFloat(
-      document.getElementById("porcentagem-do-betume").value
-  );
+    const porcBetume = parseFloat(
+        document.getElementById("porcentagem-do-betume").value
+    );
 
-  const vcbCP2 = (porcBetume * densidadeAPCP2) / densidadeCap
+    const vcbCP2 = (porcBetume * densidadeAPCP2) / densidadeCap
 
-  document.getElementById("vcb-cp2").value = parseFloat(vcbCP2.toFixed(2));
+    document.getElementById("vcb-cp2").value = parseFloat(vcbCP2.toFixed(2));
 }
 
 function vamCP2() {
-  const porcVaziosCP2 = parseFloat(
-      document.getElementById("porcentagem-vaios-cp2").value
-  );
+    const porcVaziosCP2 = parseFloat(
+        document.getElementById("porcentagem-vaios-cp2").value
+    );
 
-  const vcbCP2 = parseFloat(document.getElementById("vcb-cp2").value);
+    const vcbCP2 = parseFloat(document.getElementById("vcb-cp2").value);
 
-  const vamCP2 = porcVaziosCP2 + vcbCP2;
+    const vamCP2 = porcVaziosCP2 + vcbCP2;
 
-  document.getElementById("vam-cp2").value = parseFloat(vamCP2.toFixed(2));
+    document.getElementById("vam-cp2").value = parseFloat(vamCP2.toFixed(2));
 }
 
 function rbvCP2() {
-  const vcbCP2 = parseFloat(document.getElementById("vcb-cp2").value);
+    const vcbCP2 = parseFloat(document.getElementById("vcb-cp2").value);
 
-  const vamCP2 = parseFloat(document.getElementById("vam-cp2").value);
+    const vamCP2 = parseFloat(document.getElementById("vam-cp2").value);
 
-  const rbvCP2 = (vcbCP2 / vamCP2) * 100;
+    const rbvCP2 = (vcbCP2 / vamCP2) * 100;
 
-  document.getElementById("rbv-cp2").value = parseFloat(rbvCP2.toFixed(2));
+    document.getElementById("rbv-cp2").value = parseFloat(rbvCP2.toFixed(2));
 }
 
 
-  //estabilidade marshall cp3
-  function volumeCP3() {
+//estabilidade marshall cp3
+function volumeCP3() {
     const pesoArCP3 = parseFloat(document.getElementById("peso-ar-cp3").value);
-  
+
     const pesoImersoCP3 = parseFloat(
         document.getElementById("peso-imerso-cp3").value
     );
-  
+
     const volumeCP3 = pesoArCP3 - pesoImersoCP3;
-  
+
     document.getElementById("volume-cp3").value = parseFloat(
         volumeCP3.toFixed(2)
     );
-  
+
     densidadeApCP3();
     densidadeRiceCP3();
     porcVaziosCP3();
     vcbCP3();
     vamCP3();
     rbvCP3();
-  }
-  
-  function densidadeApCP3() {
+}
+
+function densidadeApCP3() {
     const pesoArCP3 = parseFloat(document.getElementById("peso-ar-cp3").value);
-  
+
     const volumeCP3 = parseFloat(document.getElementById("volume-cp3").value);
-  
+
     const densidadeAPCP3 = pesoArCP3 / volumeCP3;
-  
+
     document.getElementById("densidade-ap-cp3").value = parseFloat(
         densidadeAPCP3.toFixed(3)
     );
-  }
-  
-  function densidadeRiceCP3() {
+}
+
+function densidadeRiceCP3() {
     const densidadeRiceCP3 = 2.591;
     document.getElementById("densidade-rice-cp3").value = parseFloat(
         densidadeRiceCP3.toFixed(3)
     );
-  }
-  
-  function porcVaziosCP3() {
+}
+
+function porcVaziosCP3() {
     const densidadeRiceCP3 = 2.591;
-  
+
     const densidadeAPCP3 = parseFloat(
         document.getElementById("densidade-ap-cp3").value
     );
-  
+
     const porcVaziosCP3 =
         ((densidadeRiceCP3 - densidadeAPCP3) / densidadeRiceCP3) * 100;
-  
+
     document.getElementById("porcentagem-vaios-cp3").value = parseFloat(
         porcVaziosCP3.toFixed(2)
     );
-  }
-  
-  function vcbCP3() {
+}
+
+function vcbCP3() {
     const densidadeCap = 1.01;
-  
+
     const densidadeAPCP3 = parseFloat(
         document.getElementById("densidade-ap-cp3").value
     );
-  
+
     const porcBetume = parseFloat(
         document.getElementById("porcentagem-do-betume").value
     );
-  
+
     const vcbCP3 = (porcBetume * densidadeAPCP3) / densidadeCap
-  
+
     document.getElementById("vcb-cp3").value = parseFloat(vcbCP3.toFixed(2));
-  }
-  
-  function vamCP3() {
+}
+
+function vamCP3() {
     const porcVaziosCP3 = parseFloat(
         document.getElementById("porcentagem-vaios-cp3").value
     );
-  
+
     const vcbCP3 = parseFloat(document.getElementById("vcb-cp3").value);
-  
+
     const vamCP3 = porcVaziosCP3 + vcbCP3;
-  
+
     document.getElementById("vam-cp3").value = parseFloat(vamCP3.toFixed(2));
-  }
-  
-  function rbvCP3() {
+}
+
+function rbvCP3() {
     const vcbCP3 = parseFloat(document.getElementById("vcb-cp3").value);
-  
+
     const vamCP3 = parseFloat(document.getElementById("vam-cp3").value);
-  
+
     const rbvCP3 = (vcbCP3 / vamCP3) * 100;
-  
+
     document.getElementById("rbv-cp3").value = parseFloat(rbvCP3.toFixed(2));
-  }
+}

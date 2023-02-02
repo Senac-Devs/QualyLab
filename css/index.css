@@ -74,6 +74,7 @@ main {
   outline: none;
 }
 .menu {
+  display: block;
   gap: 8px;
   display: flex;
   align-items: space-between;
