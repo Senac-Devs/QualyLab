@@ -14,7 +14,7 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="./js/login.js"></script>
 
-        <title>Index</title>
+        <title>Extração de Betume Completa</title>
     </head>
     <body>
         <header>
@@ -23,7 +23,9 @@
                 <a href="./index.html" class="button">Obras em andamento</a>
                 <a href="./ensaios.html" class="button">Ensaios</a>
                 <a href="./relatorios.html" class="button">Relatórios</a>
-                <a href="./formulas.html" class="button">Cadastrar fórmula</a>
+                <a href="./formulas.html" class="button"
+                    >Cadastrar novo ensaio</a
+                >
                 <a href="./obras.html" class="button">Cadastrar nova obra</a>
                 <a href="./devs.html" class="button">Desenvolvedores</a>
                 <a href="" class="button" onclick="deslogar()">Sair</a>
@@ -49,37 +51,36 @@
                         <select name="" id="">
                             <option value="">Selecione</option>
                             <option value="Concreto Betumino Usinado a Quente">
-                                Porto Emigdão (divisa PR/SP) - Entr. PR-431
+                                1
                             </option>
                             <option
                                 value="Porto Emigdão (divisa PR/SP) - Entr. PR-431"
                             >
-                                Porto Emigdão (divisa PR/SP) - Entr. PR-432
+                                2
                             </option>
                             <option
                                 value="Porto Emigdão (divisa PR/SP) - Entr. PR-431"
                             >
-                                Porto Emigdão (divisa PR/SP) - Entr. PR-433
+                                3
                             </option>
                             <option
                                 value="Porto Emigdão (divisa PR/SP) - Entr. PR-431"
                             >
-                                Porto Emigdão (divisa PR/SP) - Entr. PR-434
+                                4
                             </option>
                             <option
                                 value="Porto Emigdão (divisa PR/SP) - Entr. PR-431"
                             >
-                                Porto Emigdão (divisa PR/SP) - Entr. PR-435
+                                5
                             </option>
                         </select>
                         <label for="">Extensão</label>
+                        <input type="number" name="" id="" />
                         <select name="" id="">
                             <option value="">Selecione</option>
-                            <option value="12,93">12,93</option>
-                            <option value="14,50">14,50</option>
-                            <option value="20,80">20,80</option>
-                            <option value="1">1</option>
-                            <option value="51">51</option>
+                            <option value="12,93">Metros</option>
+                            <option value="14,50">Quilômetros</option>
+                            <label for="">Extensão</label>
                         </select>
                     </div>
                     <div class="linha2">
@@ -95,28 +96,11 @@
                         <label for="">Tipo de Serviço</label>
                         <select name="" id="">
                             <option value="">Selecione</option>
-                            <option
-                                value="Concreto Betuminoso Usinado a Quente"
-                            >
-                                Concreto Betuminoso Usinado a Quente
-                            </option>
-                            <option value="Concreto Betuminoso Usinado a Frio">
-                                Concreto Betuminoso Usinado a Frio
-                            </option>
-                            <option value="Concreto Betuminoso Usinado a Água">
-                                Concreto Betuminoso Usinado a Água
-                            </option>
-                            <option value="Concreto Betuminoso Usinado a Cera">
-                                Concreto Betuminoso Usinado a Cera
-                            </option>
-                            <option value="Concreto Betuminoso Usinado a Vento">
-                                Concreto Betuminoso Usinado a Vento
-                            </option>
-                            <option
-                                value="Concreto Betuminoso Usinado a Pressão"
-                            >
-                                Concreto Betuminoso Usinado a Pressão
-                            </option>
+                            <option value="Reperfilagem">Reperfilagem</option>
+                            <option value="Tapa buraco">Tapa buraco</option>
+                            <option value="Correção">Correção</option>
+                            <option value="Capa">Capa</option>
+                            <option value="Outros">Outros</option>
                         </select>
                         <label for="">Data</label>
                         <input type="date" />
@@ -145,6 +129,7 @@
                                     <th>1"</th>
                                     <td style="background-color: #bfbfbf">
                                         <input
+                                            tabindex="3"
                                             class="input-cel"
                                             type="number"
                                             id="retida1"
@@ -202,6 +187,7 @@
                                         style="background-color: #bfbfbf"
                                     >
                                         <input
+                                            tabindex="1"
                                             class="input-cel"
                                             type="number"
                                             id="peso-amostra-com-betume"
@@ -214,6 +200,7 @@
                                     <th>3/4"</th>
                                     <td style="background-color: #bfbfbf">
                                         <input
+                                            tabindex="4"
                                             class="input-cel"
                                             type="number"
                                             id="retida2"
@@ -268,6 +255,7 @@
                                     <th>3/8"</th>
                                     <td style="background-color: #bfbfbf">
                                         <input
+                                            tabindex="5"
                                             class="input-cel"
                                             type="number"
                                             id="retida3"
@@ -325,6 +313,7 @@
                                         style="background-color: #bfbfbf"
                                     >
                                         <input
+                                            tabindex="2"
                                             onkeyup="pesoBetume()"
                                             class="input-cel"
                                             type="number"
@@ -337,6 +326,7 @@
                                     <th>nº 4</th>
                                     <td style="background-color: #bfbfbf">
                                         <input
+                                            tabindex="6"
                                             class="input-cel"
                                             type="number"
                                             id="retida4"
@@ -391,6 +381,7 @@
                                     <th>nº 10</th>
                                     <td style="background-color: #bfbfbf">
                                         <input
+                                            tabindex="7"
                                             class="input-cel"
                                             type="number"
                                             id="retida5"
@@ -455,6 +446,7 @@
                                     <th>nº 40</th>
                                     <td style="background-color: #bfbfbf">
                                         <input
+                                            tabindex="8"
                                             class="input-cel"
                                             type="number"
                                             id="retida6"
@@ -509,6 +501,7 @@
                                     <th>nº 200</th>
                                     <td style="background-color: #bfbfbf">
                                         <input
+                                            tabindex="9"
                                             class="input-cel"
                                             type="number"
                                             id="retida7"
@@ -561,6 +554,7 @@
                                     <th>% DE BETUME</th>
                                     <td>
                                         <input
+                                            tabindex="2"
                                             class="input-cel"
                                             id="porcentagem-do-betume"
                                             type="number"
@@ -605,7 +599,6 @@
                                     </th>
                                     <th>PESO AO AR (g)</th>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     >
                                         <input
@@ -616,7 +609,6 @@
                                         />
                                     </td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     >
                                         <input
@@ -627,7 +619,6 @@
                                         />
                                     </td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     >
                                         <input
@@ -638,7 +629,6 @@
                                         />
                                     </td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     >
                                         <input
@@ -649,7 +639,6 @@
                                         />
                                     </td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     >
                                         <input
@@ -660,7 +649,6 @@
                                         />
                                     </td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     >
                                         <input
@@ -674,7 +662,6 @@
                                 <tr>
                                     <th>PESO IMERSO</th>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     >
                                         <input
@@ -686,7 +673,6 @@
                                         />
                                     </td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     >
                                         <input
@@ -698,7 +684,6 @@
                                         />
                                     </td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     >
                                         <input
@@ -710,7 +695,6 @@
                                         />
                                     </td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     >
                                         <input
@@ -722,7 +706,6 @@
                                         />
                                     </td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     >
                                         <input
@@ -734,7 +717,6 @@
                                         />
                                     </td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     >
                                         <input
@@ -1106,27 +1088,21 @@
                                 <tr>
                                     <th>LEITURA DO DEFLECTÔMETRO</th>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                 </tr>
@@ -1235,54 +1211,42 @@
                                 <tr>
                                     <th>FLUÊNCIA LEITURA INICIAL</th>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                 </tr>
                                 <tr>
                                     <th>FLUÊNCIA LEITURA FINAL</th>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                 </tr>
@@ -1340,27 +1304,21 @@
                                 <tr>
                                     <th>FATOR DE CORREÇÃO</th>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                     <td
-                                        contenteditable="true"
                                         style="background-color: #bfbfbf"
                                     ></td>
                                 </tr>
@@ -1394,7 +1352,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <button class="button" type="button" onclick="salvar()">
+                        <button class="button" type="submit" onclick="salvar()">
                             Salvar
                         </button>
                     </div>
