@@ -51,7 +51,12 @@ function porcentagemBetume() {
     document.getElementById("porcentagem-do-betume").value = parseFloat(
         porcentagemBetume.toFixed(2)
     );
-    console.log(porcentagemBetume);
+    volumeCP1();
+    volumeCP2();
+    volumeCP3();
+    // volumeCP4()
+    // volumeCP5()
+    // volumeCP6()
 }
 
 //Granulometria
@@ -164,7 +169,6 @@ function porcentagemPassando() {
     pass6.value = (100 - parseFloat(retidaPorcentAcum6)).toFixed(2);
     pass7.value = (100 - parseFloat(retidaPorcentAcum7)).toFixed(2);
 }
-
 
 const ctx = document.getElementById("myChart");
 const pass1 = document.getElementById("pass1");
@@ -312,7 +316,7 @@ function vcbCP1() {
         document.getElementById("porcentagem-do-betume").value
     );
 
-    const vcbCP1 = (porcBetume * densidadeAPCP1) / densidadeCap
+    const vcbCP1 = (porcBetume * densidadeAPCP1) / densidadeCap;
 
     document.getElementById("vcb-cp1").value = parseFloat(vcbCP1.toFixed(2));
 }
@@ -337,6 +341,51 @@ function rbvCP1() {
     const rbvCP1 = (vcbCP1 / vamCP1) * 100;
 
     document.getElementById("rbv-cp1").value = parseFloat(rbvCP1.toFixed(2));
+}
+
+function estabilidadeLidaCP1() {
+    const leituraDeflec = parseFloat(
+        document.getElementById("leitura-deflectometro-cp1").value
+    );
+
+    const constantePrensa = parseFloat(
+        document.getElementById("constante-prensa").value
+    );
+
+    const estabilidadeLida = leituraDeflec * constantePrensa;
+
+    document.getElementById("estabilidade-lida-cp1").value = parseFloat(
+        estabilidadeLida.toFixed(2)
+    );
+    estabilidadeCorrigidaCP1();
+}
+
+function estabilidadeCorrigidaCP1() {
+    const estabilidadeLida = parseFloat(
+        document.getElementById("estabilidade-lida-cp1").value
+    );
+
+    const fatorCorrecao = parseFloat(
+        document.getElementById("fator-correcao-cp1").value
+    );
+
+    const estabilidadeCorrigida = estabilidadeLida * fatorCorrecao;
+
+    document.getElementById("estabilidade-corrigida-cp1").value = parseFloat(
+        estabilidadeCorrigida.toFixed(2)
+    );
+}
+
+function fluenciaCP1() {
+    const leituraInicia = document.getElementById("fluencia-inicial-cp1").value;
+
+    const leituraFinal = document.getElementById("fluencia-final-cp1").value;
+
+    const fluencia = leituraInicia - leituraFinal;
+
+    document.getElementById("fluencia-cp1").value = parseFloat(
+        fluencia.toFixed(2)
+    );
 }
 
 //estabilidade marshall cp2
@@ -406,7 +455,7 @@ function vcbCP2() {
         document.getElementById("porcentagem-do-betume").value
     );
 
-    const vcbCP2 = (porcBetume * densidadeAPCP2) / densidadeCap
+    const vcbCP2 = (porcBetume * densidadeAPCP2) / densidadeCap;
 
     document.getElementById("vcb-cp2").value = parseFloat(vcbCP2.toFixed(2));
 }
@@ -433,6 +482,50 @@ function rbvCP2() {
     document.getElementById("rbv-cp2").value = parseFloat(rbvCP2.toFixed(2));
 }
 
+function estabilidadeLidaCP2() {
+    const leituraDeflec = parseFloat(
+        document.getElementById("leitura-deflectometro-cp2").value
+    );
+
+    const constantePrensa = parseFloat(
+        document.getElementById("constante-prensa").value
+    );
+
+    const estabilidadeLida = leituraDeflec * constantePrensa;
+
+    document.getElementById("estabilidade-lida-cp2").value = parseFloat(
+        estabilidadeLida.toFixed(2)
+    );
+    estabilidadeCorrigidaCP2();
+}
+
+function estabilidadeCorrigidaCP2() {
+    const estabilidadeLida = parseFloat(
+        document.getElementById("estabilidade-lida-cp2").value
+    );
+
+    const fatorCorrecao = parseFloat(
+        document.getElementById("fator-correcao-cp2").value
+    );
+
+    const estabilidadeCorrigida = estabilidadeLida * fatorCorrecao;
+
+    document.getElementById("estabilidade-corrigida-cp2").value = parseFloat(
+        estabilidadeCorrigida.toFixed(2)
+    );
+}
+
+function fluenciaCP2() {
+    const leituraInicia = document.getElementById("fluencia-inicial-cp2").value;
+
+    const leituraFinal = document.getElementById("fluencia-final-cp2").value;
+
+    const fluencia = leituraInicia - leituraFinal;
+
+    document.getElementById("fluencia-cp2").value = parseFloat(
+        fluencia.toFixed(2)
+    );
+}
 
 //estabilidade marshall cp3
 function volumeCP3() {
@@ -501,7 +594,7 @@ function vcbCP3() {
         document.getElementById("porcentagem-do-betume").value
     );
 
-    const vcbCP3 = (porcBetume * densidadeAPCP3) / densidadeCap
+    const vcbCP3 = (porcBetume * densidadeAPCP3) / densidadeCap;
 
     document.getElementById("vcb-cp3").value = parseFloat(vcbCP3.toFixed(2));
 }
@@ -526,4 +619,49 @@ function rbvCP3() {
     const rbvCP3 = (vcbCP3 / vamCP3) * 100;
 
     document.getElementById("rbv-cp3").value = parseFloat(rbvCP3.toFixed(2));
+}
+
+function estabilidadeLidaCP3() {
+    const leituraDeflec = parseFloat(
+        document.getElementById("leitura-deflectometro-cp3").value
+    );
+
+    const constantePrensa = parseFloat(
+        document.getElementById("constante-prensa").value
+    );
+
+    const estabilidadeLida = leituraDeflec * constantePrensa;
+
+    document.getElementById("estabilidade-lida-cp3").value = parseFloat(
+        estabilidadeLida.toFixed(2)
+    );
+    estabilidadeCorrigidaCP3();
+}
+
+function estabilidadeCorrigidaCP3() {
+    const estabilidadeLida = parseFloat(
+        document.getElementById("estabilidade-lida-cp3").value
+    );
+
+    const fatorCorrecao = parseFloat(
+        document.getElementById("fator-correcao-cp3").value
+    );
+
+    const estabilidadeCorrigida = estabilidadeLida * fatorCorrecao;
+
+    document.getElementById("estabilidade-corrigida-cp3").value = parseFloat(
+        estabilidadeCorrigida.toFixed(2)
+    );
+}
+
+function fluenciaCP3() {
+    const leituraInicia = document.getElementById("fluencia-inicial-cp3").value;
+
+    const leituraFinal = document.getElementById("fluencia-final-cp3").value;
+
+    const fluencia = leituraInicia - leituraFinal;
+
+    document.getElementById("fluencia-cp3").value = parseFloat(
+        fluencia.toFixed(2)
+    );
 }
