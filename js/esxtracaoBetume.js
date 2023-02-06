@@ -381,7 +381,7 @@ function fluenciaCP1() {
 
     const leituraFinal = document.getElementById("fluencia-final-cp1").value;
 
-    const fluencia = leituraInicia - leituraFinal;
+    const fluencia = leituraFinal - leituraInicia;
 
     document.getElementById("fluencia-cp1").value = parseFloat(
         fluencia.toFixed(2)
@@ -520,7 +520,7 @@ function fluenciaCP2() {
 
     const leituraFinal = document.getElementById("fluencia-final-cp2").value;
 
-    const fluencia = leituraInicia - leituraFinal;
+    const fluencia = leituraFinal - leituraInicia;
 
     document.getElementById("fluencia-cp2").value = parseFloat(
         fluencia.toFixed(2)
@@ -659,7 +659,7 @@ function fluenciaCP3() {
 
     const leituraFinal = document.getElementById("fluencia-final-cp3").value;
 
-    const fluencia = leituraInicia - leituraFinal;
+    const fluencia = leituraFinal - leituraInicia;
 
     document.getElementById("fluencia-cp3").value = parseFloat(
         fluencia.toFixed(2)
