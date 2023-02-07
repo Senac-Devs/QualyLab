@@ -553,7 +553,7 @@
                             <tbody>
                                 <tr>
                                     <th
-                                        rowspan="17"
+                                        rowspan="20"
                                         style="
                                             writing-mode: vertical-rl;
                                             transform: rotate(180deg);
@@ -562,66 +562,66 @@
                                         ESTABILIDADE MARSHALL
                                     </th>
                                     <th>PESO AO AR (g)</th>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    >
+                                    <!-- pesso ao ar cp 01 -->
+                                    <td style="background-color: #bfbfbf">
                                         <input
+                                            onkeyup="volumeCP1()"
+                                            tabindex="10"
                                             class="input-cel"
                                             type="number"
                                             id="peso-ar-cp1"
                                             min="0"
                                         />
                                     </td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    >
+                                    <!-- pesso ao ar cp 02 -->
+                                    <td style="background-color: #bfbfbf">
                                         <input
+                                        onkeyup="volumeCP2()"
+                                            tabindex="12"
                                             class="input-cel"
                                             type="number"
                                             id="peso-ar-cp2"
                                             min="0"
                                         />
                                     </td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    >
+                                    <!-- pesso ao ar cp 03 -->
+                                    <td style="background-color: #bfbfbf">
                                         <input
+                                        onkeyup="volumeCP3()"
+                                            tabindex="14"
                                             class="input-cel"
                                             type="number"
                                             id="peso-ar-cp3"
                                             min="0"
                                         />
                                     </td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    >
+                                    <!-- pesso ao ar cp 04 -->
+                                    <td style="background-color: #bfbfbf">
                                         <input
+                                        onkeyup="volumeCP4()"
+                                            tabindex="16"
                                             class="input-cel"
                                             type="number"
                                             id="peso-ar-cp4"
                                             min="0"
                                         />
                                     </td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    >
+                                    <!-- pesso ao ar cp 05 -->
+                                    <td style="background-color: #bfbfbf">
                                         <input
+                                        onkeyup="volumeCP5()"
+                                            tabindex="18"
                                             class="input-cel"
                                             type="number"
                                             id="peso-ar-cp5"
                                             min="0"
                                         />
                                     </td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    >
+                                    <!-- pesso ao ar cp 06 -->
+                                    <td style="background-color: #bfbfbf">
                                         <input
+                                        onkeyup="volumeCP6()"
+                                            tabindex="20"
                                             class="input-cel"
                                             type="number"
                                             id="peso-ar-cp6"
@@ -631,11 +631,10 @@
                                 </tr>
                                 <tr>
                                     <th>PESO IMERSO</th>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    >
+                                    <!-- Peso Imerso cp 01 -->
+                                    <td style="background-color: #bfbfbf">
                                         <input
+                                            tabindex="11"
                                             onkeyup="volumeCP1()"
                                             class="input-cel"
                                             type="number"
@@ -643,11 +642,10 @@
                                             min="0"
                                         />
                                     </td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    >
+                                    <!-- Peso Imerso cp 02 -->
+                                    <td style="background-color: #bfbfbf">
                                         <input
+                                            tabindex="13"
                                             onkeyup="volumeCP2()"
                                             class="input-cel"
                                             type="number"
@@ -655,11 +653,10 @@
                                             min="0"
                                         />
                                     </td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    >
+                                    <!-- Peso Imerso cp 03 -->
+                                    <td style="background-color: #bfbfbf">
                                         <input
+                                            tabindex="15"
                                             onkeyup="volumeCP3()"
                                             class="input-cel"
                                             type="number"
@@ -667,11 +664,10 @@
                                             min="0"
                                         />
                                     </td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    >
+                                    <!-- Peso Imerso cp 04 -->
+                                    <td style="background-color: #bfbfbf">
                                         <input
+                                            tabindex="17"
                                             onkeyup="volumeCP4()"
                                             class="input-cel"
                                             type="number"
@@ -679,11 +675,10 @@
                                             min="0"
                                         />
                                     </td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    >
+                                    <!-- Peso Imerso cp 05 -->
+                                    <td style="background-color: #bfbfbf">
                                         <input
+                                            tabindex="19"
                                             onkeyup="volumeCP5()"
                                             class="input-cel"
                                             type="number"
@@ -691,11 +686,10 @@
                                             min="0"
                                         />
                                     </td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    >
+                                    <!-- Peso Imerso cp 06 -->
+                                    <td style="background-color: #bfbfbf">
                                         <input
+                                            tabindex="21"
                                             onkeyup="volumeCP6()"
                                             class="input-cel"
                                             type="number"
@@ -707,7 +701,9 @@
                                 <tr>
                                     <th>VOLUME DO CORPO DE PROVA</th>
                                     <td>
+                                        <!-- Volume CP 01 -->
                                         <input
+                                            onkeyup="volumeCP1()"
                                             class="input-cel"
                                             id="volume-cp1"
                                             type="number"
@@ -715,7 +711,9 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- Volume CP 02 -->
                                         <input
+                                            onkeyup="volumeCP2()"
                                             class="input-cel"
                                             id="volume-cp2"
                                             type="number"
@@ -723,7 +721,9 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- Volume CP 03 -->
                                         <input
+                                            onkeyup="volumeCP3()"
                                             class="input-cel"
                                             id="volume-cp3"
                                             type="number"
@@ -731,7 +731,9 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- Volume CP 04 -->
                                         <input
+                                            onkeyup="volumeCP4()"
                                             class="input-cel"
                                             id="volume-cp4"
                                             type="number"
@@ -739,7 +741,9 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- Volume CP 05 -->
                                         <input
+                                            onkeyup="volumeCP5()"
                                             class="input-cel"
                                             id="volume-cp5"
                                             type="number"
@@ -747,7 +751,9 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- Volume CP 06 -->
                                         <input
+                                            onkeyup="volumeCP6()"
                                             class="input-cel"
                                             id="volume-cp6"
                                             type="number"
@@ -758,6 +764,7 @@
                                 <tr>
                                     <th>DENSIDADE APARENTE</th>
                                     <td>
+                                        <!-- Densidade AP CP 01  -->
                                         <input
                                             class="input-cel"
                                             id="densidade-ap-cp1"
@@ -766,6 +773,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- Densidade AP CP 02  -->
                                         <input
                                             class="input-cel"
                                             id="densidade-ap-cp2"
@@ -774,6 +782,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- Densidade AP CP 03  -->
                                         <input
                                             class="input-cel"
                                             id="densidade-ap-cp3"
@@ -782,6 +791,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- Densidade AP CP 04  -->
                                         <input
                                             class="input-cel"
                                             id="densidade-ap-cp4"
@@ -790,6 +800,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- Densidade AP CP 05  -->
                                         <input
                                             class="input-cel"
                                             id="densidade-ap-cp5"
@@ -798,6 +809,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- Densidade AP CP 06  -->
                                         <input
                                             class="input-cel"
                                             id="densidade-ap-cp6"
@@ -860,6 +872,7 @@
                                 <tr>
                                     <th>% VAZIOS</th>
                                     <td>
+                                        <!-- % de vazios CP 01 -->
                                         <input
                                             class="input-cel"
                                             id="porcentagem-vaios-cp1"
@@ -868,6 +881,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- % de vazios CP 02 -->
                                         <input
                                             class="input-cel"
                                             id="porcentagem-vaios-cp2"
@@ -876,6 +890,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- % de vazios CP 03 -->
                                         <input
                                             class="input-cel"
                                             id="porcentagem-vaios-cp3"
@@ -884,6 +899,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- % de vazios CP 04 -->
                                         <input
                                             class="input-cel"
                                             id="porcentagem-vaios-cp4"
@@ -892,6 +908,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- % de vazios CP 05 -->
                                         <input
                                             class="input-cel"
                                             id="porcentagem-vaios-cp5"
@@ -900,6 +917,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- % de vazios CP 06 -->
                                         <input
                                             class="input-cel"
                                             id="porcentagem-vaios-cp6"
@@ -909,8 +927,9 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>% V.C.B.</th>
+                                    <th>% V.C.B. (vazios cheios com betume)</th>
                                     <td>
+                                        <!-- vazios cheios com betume %V.C.B. -->
                                         <input
                                             class="input-cel"
                                             id="vcb-cp1"
@@ -919,6 +938,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- vazios cheios com betume %V.C.B. -->
                                         <input
                                             class="input-cel"
                                             id="vcb-cp2"
@@ -927,6 +947,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- vazios cheios com betume %V.C.B. -->
                                         <input
                                             class="input-cel"
                                             id="vcb-cp3"
@@ -935,6 +956,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- vazios cheios com betume %V.C.B. -->
                                         <input
                                             class="input-cel"
                                             id="vcb-cp4"
@@ -943,6 +965,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- vazios cheios com betume %V.C.B. -->
                                         <input
                                             class="input-cel"
                                             id="vcb-cp5"
@@ -951,6 +974,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- vazios cheios com betume %V.C.B. -->
                                         <input
                                             class="input-cel"
                                             id="vcb-cp6"
@@ -960,8 +984,11 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>% V.A.M.</th>
+                                    <th>
+                                        % V.A.M. (vazios nos agregados minerais)
+                                    </th>
                                     <td>
+                                        <!-- % V.A.M. CP 01 -->
                                         <input
                                             class="input-cel"
                                             id="vam-cp1"
@@ -970,6 +997,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- % V.A.M. CP 02 -->
                                         <input
                                             class="input-cel"
                                             id="vam-cp2"
@@ -978,6 +1006,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- % V.A.M. CP 03 -->
                                         <input
                                             class="input-cel"
                                             id="vam-cp3"
@@ -986,6 +1015,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- % V.A.M. CP 04 -->
                                         <input
                                             class="input-cel"
                                             id="vam-cp4"
@@ -994,6 +1024,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- % V.A.M. CP 05 -->
                                         <input
                                             class="input-cel"
                                             id="vam-cp5"
@@ -1002,6 +1033,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- % V.A.M. CP 06 -->
                                         <input
                                             class="input-cel"
                                             id="vam-cp6"
@@ -1011,8 +1043,9 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>% R.B.V.</th>
+                                    <th>% R.B.V. (relação betume vazios)</th>
                                     <td>
+                                        <!-- % R.B.V. CP 01 -->
                                         <input
                                             class="input-cel"
                                             id="rbv-cp1"
@@ -1021,6 +1054,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- % R.B.V. CP 02-->
                                         <input
                                             class="input-cel"
                                             id="rbv-cp2"
@@ -1029,6 +1063,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- % R.B.V. CP 03 -->
                                         <input
                                             class="input-cel"
                                             id="rbv-cp3"
@@ -1037,6 +1072,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- % R.B.V. CP 04 -->
                                         <input
                                             class="input-cel"
                                             id="rbv-cp4"
@@ -1045,6 +1081,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- % R.B.V. CP 05 -->
                                         <input
                                             class="input-cel"
                                             id="rbv-cp5"
@@ -1053,6 +1090,7 @@
                                         />
                                     </td>
                                     <td>
+                                        <!-- % R.B.V. CP 06 -->
                                         <input
                                             class="input-cel"
                                             id="rbv-cp6"
@@ -1063,77 +1101,193 @@
                                 </tr>
                                 <tr>
                                     <th>LEITURA DO DEFLECTÔMETRO</th>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
+                                    <!-- Leitura do deflectômetro cp 01 -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="22"
+                                            class="input-cel"
+                                            type="number"
+                                            id="leitura-deflectometro-cp1"
+                                            min="0"
+                                            onkeyup="estabilidadeLidaCP1()"
+                                        />
+                                    </td>
+                                    <!-- Leitura do deflectômetro cp 02 -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="23"
+                                            class="input-cel"
+                                            type="number"
+                                            id="leitura-deflectometro-cp2"
+                                            min="0"
+                                            onkeyup="estabilidadeLidaCP2()"
+                                        />
+                                    </td>
+                                    <!-- Leitura do deflectômetro cp 03 -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="24"
+                                            class="input-cel"
+                                            type="number"
+                                            id="leitura-deflectometro-cp3"
+                                            min="0"
+                                            onkeyup="estabilidadeLidaCP3()"
+                                        />
+                                    </td>
+                                    <!-- Leitura do deflectômetro cp 04 -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="25"
+                                            class="input-cel"
+                                            type="number"
+                                            id="leitura-deflectometro-cp4"
+                                            min="0"
+                                        />
+                                    </td>
+                                    <!-- Leitura do deflectômetro cp 05 -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="26"
+                                            class="input-cel"
+                                            type="number"
+                                            id="leitura-deflectometro-cp5"
+                                            min="0"
+                                        />
+                                    </td>
+                                    <!-- Leitura do deflectômetro cp 06 -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="27"
+                                            class="input-cel"
+                                            type="number"
+                                            id="leitura-deflectometro-cp6"
+                                            min="0"
+                                        />
+                                    </td>
                                 </tr>
+
+                                <tr>
+                                    <th>FATOR DE CORREÇÃO</th>
+                                    <!--Fator de correção CP 01  -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="28"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fator-correcao-cp1"
+                                            min="0"
+                                            onkeyup="estabilidadeLidaCP1()"
+                                        />
+                                    </td>
+                                    <!--Fator de correção CP 02  -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="29"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fator-correcao-cp2"
+                                            min="0"
+                                            onkeyup="estabilidadeLidaCP2()"
+                                        />
+                                    </td>
+                                    <!--Fator de correção CP 03  -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="30"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fator-correcao-cp3"
+                                            min="0"
+                                            onkeyup="estabilidadeLidaCP3()"
+                                        />
+                                    </td>
+                                    <!--Fator de correção CP 04  -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="31"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fator-correcao-cp4"
+                                            min="0"
+                                        />
+                                    </td>
+                                    <!--Fator de correção CP 05  -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="32"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fator-correcao-cp5"
+                                            min="0"
+                                        />
+                                    </td>
+                                    <!--Fator de correção CP 06  -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="33"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fator-correcao-cp6"
+                                            min="0"
+                                        />
+                                    </td>
+                                </tr>
+
                                 <tr>
                                     <th>ESTABILIDADE LIDA</th>
+                                    <!-- Estabilidade Lida CP1 -->
                                     <td>
                                         <input
                                             class="input-cel"
-                                            id=""
+                                            id="estabilidade-lida-cp1"
+                                            type="number"
+                                            readonly
+                                            onkeyup="estabilidadeLidaCP1()"
+                                        />
+                                    </td>
+                                    <!-- Estabilidade Lida CP2 -->
+                                    <td>
+                                        <input
+                                            class="input-cel"
+                                            id="estabilidade-lida-cp2"
+                                            type="number"
+                                            readonly
+                                            onkeyup="estabilidadeLidaCP2()"
+                                        />
+                                    </td>
+                                    <!-- Estabilidade Lida CP3 -->
+                                    <td>
+                                        <input
+                                            class="input-cel"
+                                            id="estabilidade-lida-cp3"
+                                            type="number"
+                                            readonly
+                                            onkeyup="estabilidadeLidaCP3()"
+                                        />
+                                    </td>
+                                    <!-- Estabilidade Lida CP4 -->
+                                    <td>
+                                        <input
+                                            class="input-cel"
+                                            id="estabilidade-lida-cp4"
                                             type="number"
                                             readonly
                                         />
                                     </td>
+                                    <!-- Estabilidade Lida CP5 -->
                                     <td>
                                         <input
                                             class="input-cel"
-                                            id=""
+                                            id="estabilidade-lida-cp5"
                                             type="number"
                                             readonly
                                         />
                                     </td>
+                                    <!-- Estabilidade Lida CP6 -->
                                     <td>
                                         <input
                                             class="input-cel"
-                                            id=""
-                                            type="number"
-                                            readonly
-                                        />
-                                    </td>
-                                    <td>
-                                        <input
-                                            class="input-cel"
-                                            id=""
-                                            type="number"
-                                            readonly
-                                        />
-                                    </td>
-                                    <td>
-                                        <input
-                                            class="input-cel"
-                                            id=""
-                                            type="number"
-                                            readonly
-                                        />
-                                    </td>
-                                    <td>
-                                        <input
-                                            class="input-cel"
-                                            id=""
+                                            id="estabilidade-lida-cp6"
                                             type="number"
                                             readonly
                                         />
@@ -1141,50 +1295,59 @@
                                 </tr>
                                 <tr>
                                     <th>ESTABILIDADE CORRIGIDA</th>
+                                    <!-- Estabilidade Corrigida CP1 -->
                                     <td>
                                         <input
                                             class="input-cel"
-                                            id=""
+                                            id="estabilidade-corrigida-cp1"
+                                            type="number"
+                                            readonly
+                                            onkeyup="estabilidadeLidaCP1()"
+                                        />
+                                    </td>
+                                    <!-- Estabilidade Corrigida CP2 -->
+                                    <td>
+                                        <input
+                                            class="input-cel"
+                                            id="estabilidade-corrigida-cp2"
+                                            type="number"
+                                            readonly
+                                            onkeyup="estabilidadeLidaCP2()"
+                                        />
+                                    </td>
+                                    <!-- Estabilidade Corrigida CP3 -->
+                                    <td>
+                                        <input
+                                            class="input-cel"
+                                            id="estabilidade-corrigida-cp3"
+                                            type="number"
+                                            readonly
+                                            onkeyup="estabilidadeLidaCP3()"
+                                        />
+                                    </td>
+                                    <!-- Estabilidade Corrigida CP4 -->
+                                    <td>
+                                        <input
+                                            class="input-cel"
+                                            id="estabilidade-corrigida-cp4"
                                             type="number"
                                             readonly
                                         />
                                     </td>
+                                    <!-- Estabilidade Corrigida CP5 -->
                                     <td>
                                         <input
                                             class="input-cel"
-                                            id=""
+                                            id="estabilidade-corrigida-cp5"
                                             type="number"
                                             readonly
                                         />
                                     </td>
+                                    <!-- Estabilidade Corrigida CP6 -->
                                     <td>
                                         <input
                                             class="input-cel"
-                                            id=""
-                                            type="number"
-                                            readonly
-                                        />
-                                    </td>
-                                    <td>
-                                        <input
-                                            class="input-cel"
-                                            id=""
-                                            type="number"
-                                            readonly
-                                        />
-                                    </td>
-                                    <td>
-                                        <input
-                                            class="input-cel"
-                                            id=""
-                                            type="number"
-                                            readonly
-                                        />
-                                    </td>
-                                    <td>
-                                        <input
-                                            class="input-cel"
-                                            id=""
+                                            id="estabilidade-corrigida-cp6"
                                             type="number"
                                             readonly
                                         />
@@ -1192,161 +1355,228 @@
                                 </tr>
                                 <tr>
                                     <th>FLUÊNCIA LEITURA INICIAL</th>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
+                                    <!--Fluencia leitura inicial 01 -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="34"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fluencia-inicial-cp1"
+                                            min="0"
+                                            onkeyup="fluenciaCP1()"
+                                        />
+                                    </td>
+                                    <!--Fluencia leitura inicial 02 -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="35"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fluencia-inicial-cp2"
+                                            min="0"
+                                            onkeyup="fluenciaCP1()"
+                                        />
+                                    </td>
+                                    <!--Fluencia leitura inicial 03 -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="36"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fluencia-inicial-cp3"
+                                            min="0"
+                                            onkeyup="fluenciaCP2()"
+                                            />
+                                        </td>
+                                        <!--Fluencia leitura inicial 04 -->
+                                        <td style="background-color: #bfbfbf">
+                                            <input
+                                            tabindex="37"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fluencia-inicial-cp4"
+                                            min="0"
+                                            onkeyup="fluenciaCP3()"
+                                        />
+                                    </td>
+                                    <!--Fluencia leitura inicial 05 -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="38"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fluencia-inicial-cp5"
+                                            min="0"
+                                        />
+                                    </td>
+                                    <!--Fluencia leitura inicial 06 -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="39"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fluencia-inicial-cp6"
+                                            min="0"
+                                        />
+                                    </td>
                                 </tr>
+
+
                                 <tr>
                                     <th>FLUÊNCIA LEITURA FINAL</th>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
+                                    <!--Fluencia leitura final cp 01  -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="40"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fluencia-final-cp1"
+                                            min="0"
+                                            onkeyup="fluenciaCP1()"
+                                        />
+                                    </td>
+                                    <!--Fluencia leitura final cp 02  -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="41"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fluencia-final-cp2"
+                                            min="0"
+                                            onkeyup="fluenciaCP2()"
+                                        />
+                                    </td>
+                                    <!--Fluencia leitura final cp 03  -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="42"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fluencia-final-cp3"
+                                            min="0"
+                                            onkeyup="fluenciaCP3()"
+                                        />
+                                    </td>
+                                    <!--Fluencia leitura final cp 04  -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="43"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fluencia-final-cp4"
+                                            min="0"
+                                        />
+                                    </td>
+                                    <!--Fluencia leitura final cp 05  -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="44"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fluencia-final-cp5"
+                                            min="0"
+                                        />
+                                    </td>
+                                    <!--Fluencia leitura final cp 06  -->
+                                    <td style="background-color: #bfbfbf">
+                                        <input
+                                            tabindex="45"
+                                            class="input-cel"
+                                            type="number"
+                                            id="fluencia-final-cp6"
+                                            min="0"
+                                        />
+                                    </td>
                                 </tr>
+
                                 <tr>
                                     <th>FLUÊNCIA (mm)</th>
+                                    <!-- FLUENCIA CP1 -->
                                     <td>
                                         <input
                                             class="input-cel"
-                                            id=""
+                                            id="fluencia-cp1"
                                             type="number"
                                             readonly
                                         />
                                     </td>
+                                    <!-- FLUENCIA CP2 -->
                                     <td>
                                         <input
                                             class="input-cel"
-                                            id=""
+                                            id="fluencia-cp2"
                                             type="number"
                                             readonly
                                         />
                                     </td>
+                                    <!-- FLUENCIA CP3 -->
                                     <td>
                                         <input
                                             class="input-cel"
-                                            id=""
+                                            id="fluencia-cp3"
                                             type="number"
                                             readonly
                                         />
                                     </td>
+                                    <!-- FLUENCIA CP4 -->
                                     <td>
                                         <input
                                             class="input-cel"
-                                            id=""
+                                            id="fluencia-cp4"
                                             type="number"
                                             readonly
                                         />
                                     </td>
+                                    <!-- FLUENCIA CP5 -->
                                     <td>
                                         <input
                                             class="input-cel"
-                                            id=""
+                                            id="fluencia-cp5"
                                             type="number"
                                             readonly
                                         />
                                     </td>
+                                    <!-- FLUENCIA CP6 -->
                                     <td>
                                         <input
                                             class="input-cel"
-                                            id=""
+                                            id="fluencia-cp6"
                                             type="number"
                                             readonly
                                         />
                                     </td>
                                 </tr>
+
                                 <tr>
-                                    <th>FATOR DE CORREÇÃO</th>
+                                    <th>DENSIDADE CAP</th>
                                     <td
-                                        contenteditable="true"
+                                        colspan="1"
                                         style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
-                                    <td
-                                        contenteditable="true"
-                                        style="background-color: #bfbfbf"
-                                    ></td>
+                                    >
+                                        <input
+                                            tabindex="46"
+                                            class="input-cel"
+                                            type="number"
+                                            id="densidade-cap"
+                                            min="0"
+                                            value="1.010"
+                                        />
+                                    </td>
                                 </tr>
+
                                 <tr>
-                                    <th>FILLER/BETUME</th>
-                                    <td colspan="3"></td>
-                                    <td>
+                                    <th>CONSTANTE DA PRENSA</th>
+                                    <td
+                                        colspan="1"
+                                        style="background-color: #bfbfbf"
+                                    >
                                         <input
+                                            tabindex="47"
                                             class="input-cel"
-                                            id=""
                                             type="number"
-                                            readonly
-                                        />
-                                    </td>
-                                    <td>
-                                        <input
-                                            class="input-cel"
-                                            id=""
-                                            type="number"
-                                            readonly
-                                        />
-                                    </td>
-                                    <td>
-                                        <input
-                                            class="input-cel"
-                                            id=""
-                                            type="number"
-                                            readonly
+                                            id="constante-prensa"
+                                            min="0"
+                                            value="2.019"
                                         />
                                     </td>
                                 </tr>
